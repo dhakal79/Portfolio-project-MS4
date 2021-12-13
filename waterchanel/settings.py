@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["waterchannel.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["waterchanel.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'waterchannel.urls'
+ROOT_URLCONF = 'waterchanel.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'waterchannel.wsgi.application'
+WSGI_APPLICATION = 'waterchanel.wsgi.application'
 
 
 # Database
