@@ -1,1 +1,1 @@
-web: gunicorn waterchannel.wsgi
+web: gunicorn waterchanel.wsgi
