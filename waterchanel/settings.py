@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'blog',
-    'members',        
+    'members',
 ]
 
 MIDDLEWARE = [
