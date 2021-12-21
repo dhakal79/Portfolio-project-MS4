@@ -1,4 +1,7 @@
 from django.contrib import admin
 from .models import Post
-admin.site.register(Post)
+from django_summernote.admin import SummernoteModelAdmin
 
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content')
