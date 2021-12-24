@@ -44,4 +44,4 @@ class Comment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
     def get_absolute_url(self):
-        return rverse('article_detail' , args=(str(self.id)))
+        return reverse("home")
