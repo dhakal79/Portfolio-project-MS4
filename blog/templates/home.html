@@ -2,22 +2,32 @@
 {% block content %}
 
 <br/>
-<h1>Post</h1>
-<ul>
-{% for post in object_list %}
-    <li><a href = "{% url 'article-detail' post.pk %}">
-    {{ post.title }}</a> - {{ post.author.first_name }} 
-    {{ post.author.last_name }} -
-    {{ post.created_on }} -
-     <small>
+<div class="p-3 mb-2 bg-success text-white">
+    <h1>Water Channel Blog</h1>
+    <p>Every centimetre of sea level rise is directly felt here at the low-lying Sundarbans 
+        world largest mangrove forest, and income sources for millions of local citizens.
+        Lives of millions of people are constantly at risk of coastal erosion, salinization, mega cyclones and flooding. 
+        We talk to award-winning photographer Supratim Bhattacharjee about life at this climate forefront.
+        Living next to the Sundarbans, Supr</p>
+</div>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <h1>Post</h1>
+    <ul>
+        {% for post in object_list %}
+        <li><a href = "{% url 'article-detail' post.pk %}">
+        {{ post.title }}</a> - {{ post.author.first_name }} 
+        {{ post.author.last_name }} -
+        {{ post.created_on }} -
+        <small>
          <a href="{% url 'edit_post' post.pk %}">(Edit)</a>
         <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-    </small>     
-    <br>
-    </li>
+        </small>     
+        <br>
+        </li>
     {{ post.content }}
 
 {% endfor %}
-</ul>
+    </ul>
+</div>
 
 {% endblock %}

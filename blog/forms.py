@@ -13,5 +13,7 @@ class PostForm(forms.ModelForm):
             'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
+
+            
      
         }
