@@ -21,6 +21,15 @@
 <br/>
 {{ post.content }}
 
+<div class="d-none d-md-block col-md-6 masthead-image">
+    <!-- The featured image URL goes in the src attribute -->
+    {% if "placeholder" in post.featured_image.url %}
+    <img src="https://res.cloudinary.com/dpqhs6erg/image/upload/v1640042372/qajjd5rtyvxz6oz0rmoq.jpg" width="50%">   
+    {% else %}
+    <img src="{{ post.featured_image.url }}" width="50%">
+    {% endif %}
+</div>
+
 <br/><br/>
 <a href ="{% url 'home' %}" class="btn btn-secondary">Back</a>
 
