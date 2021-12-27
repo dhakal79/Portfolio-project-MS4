@@ -6,6 +6,14 @@ from datetime import datetime, date
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+class Category(models.Model):
+    name = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('home')
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -15,7 +23,8 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=True)  
+    category = models.CharField(max_length=250, default='coding')
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
