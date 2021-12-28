@@ -11,9 +11,10 @@
         Living next to the Sundarbans, Supr</p>
 </div>
 <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
-    <h1>Post</h1>
+<h1>Post</h1>
+<ul>
     <div class="row">
-        <ul>
+       
             {% for post in post_list %}
                 <li>
                 <strong>{{ post.title }}</strong> - <em>{{ post.author.first_name }} </em>
