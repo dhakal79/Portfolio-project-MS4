@@ -12,7 +12,7 @@ class HomeView(ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = 'home.html'
     ordering = ['-id']
-    paginated_by = 6
+    paginate_by = 6
    
 
 class ArticleDetailView(DetailView):
