@@ -55,6 +55,7 @@
                     </div>                    
                         <h2 class="card-title">{{ post.title }}</h2>
                         <small>
+                            -<a href="{% url 'category' post.category|slugify %}"></a>{{ post.category}} </em>
                             <em>{{ post.author.first_name }} </em>
                             <em>{{ post.author.last_name }}</em> -
                             <em>{{ post.created_on }} </em>
