@@ -56,7 +56,7 @@ class AddCommentView(CreateView):
 class AddCategoryView(CreateView):
     model = Category
     template_name = 'add_category_page.html'
-    fields = '__all__'    
+    fields = '__all__' 
 
 
 class UpdatePostView(UpdateView):
@@ -64,6 +64,12 @@ class UpdatePostView(UpdateView):
     form_class = PostForm
     template_name = 'edit_post.html'
     #fields = ['title', 'slug', 'content']
+
+    def post(self, request, *args, **kwargs):
+        print(request)
+        print(request.user.username)
+        form = self.form_class(request.POST)
+        return render(request, self.template_name, {'form': form})
 
 class DeletePostView(DeleteView):
     model = Post
