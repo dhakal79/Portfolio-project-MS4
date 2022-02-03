@@ -6,6 +6,7 @@ from datetime import datetime, date
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Category(models.Model):
     name = models.CharField(max_length=250)
 
@@ -14,6 +15,7 @@ class Category(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -55,5 +57,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
