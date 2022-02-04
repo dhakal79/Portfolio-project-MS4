@@ -81,11 +81,11 @@ class UpdatePostView(UpdateView):
     template_name = "edit_post.html"
     # fields = ['title', 'slug', 'content']
 
-    def post(self, request, *args, **kwargs):
-        print(request)
-        print(request.user.username)
-        form = self.form_class(request.POST)
-        return render(request, self.template_name, {"form": form})
+   # def post(self, request, *args, **kwargs):
+    #    print(request)
+    #    print(request.user.username)
+    #    form = self.form_class(request.POST)
+    #    return render(request, self.template_name, {"form": form})
 
 
 class DeletePostView(DeleteView):

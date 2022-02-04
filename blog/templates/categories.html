@@ -2,6 +2,7 @@
 {% block content %}
 
 {% if category_posts %}
+<div class="container-fluid">
 
 <h2>{{ cats }}</h2>
 <ul>
@@ -20,7 +21,7 @@
                 {% endif %}
             {% endif %}
         </small><br/>  
-        {{ post.content| slice:":200" }}<a href = "{% url 'article-detail' post.pk %}">more...</small></a>        
+        {{ post.content| slice:":300" }}<a href = "{% url 'article-detail' post.pk %}">more...</small></a>        
 </li>
 {% endfor %}
 </ul>  
