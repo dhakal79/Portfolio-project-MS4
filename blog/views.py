@@ -31,11 +31,12 @@ class HomeView(ListView):
 
 
 def CategoryView(request, cats):
-    category_posts = Post.objects.filter(category=cats.replace("-", " "))
+    category_posts = Post.objects.filter(category__icontains=cats.replace("-", " "))
+    cat_menu = Category.objects.all()
     return render(
         request,
         "categories.html",
-        {"cats": cats.title().replace("-", " "), "category_posts": category_posts},
+        {"cats": cats.title().replace("-", " "), "category_posts": category_posts, "cat_menu": cat_menu},
     )
 
 
@@ -73,7 +74,7 @@ class AddCategoryView(CreateView):
     model = Category
     template_name = "add_category_page.html"
     fields = "__all__"
-
+   
 
 class UpdatePostView(UpdateView):
     model = Post
