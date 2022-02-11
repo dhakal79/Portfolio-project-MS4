@@ -1,15 +1,14 @@
-![Optimum Coagulant dose from jar test](images/jartest.jpg)
+![Water Channel Blog](images/jartest.jpg)
 
-# Calculator optimum coagulant dose
+# Water Channel Blog 
 Welcome! [IHE Delft](http://un-ihe.org)
 ## Introduction
-Coagulation is a general treatment method to remove suspended fine particles, colour and other constituents from raw water, after adding chemicals (coagulants) and followed by further treatment. Coagulation is often applied in both conventional and advanced water treatment processes for the production of drinking water. 
+The global water crisis is a major concern today and will become more severe in the coming years. The availability of 
+freshwater becomes more challenging in the semi-arid regions. However, in other areas where freshwater is available(surface and groundwater),contamiantion and degradation of the water quality is a major issue risking the health of millions of people. As per the SDG 6, availability of fresh and safe water for all is a basic necessity for overall human development. Therefore, there is need of ideas and solutions that can help to provide the clean freeshwater to the entire population. 
 
-Theoretical calculation of the optimum coagulant dose is not possible. Therefore, for each raw water experiments are needed. In glass beakers the coagulation process (rapid mixing, flocculation and sedimentation) is performed as shown in Fiure. This bench scale test is the so called “Jar test”. 
+The overall aim of this project is to develop open access water channel blog with an objective to share the ideas and solutions to address global water issues. All the water practictioner from all over the world (including professional, students) can be a member of the community in the blog. 
 
-The overall aim of this project is to make an app which allows to analyze the google sheet data generated from the lab jar test experiments and calcualte the optimum coagulant dose. The app also allows the users to eneters the some plant operational data to calculate the total coagulant dose needed.
-
-A live app can be found [here](https://coagulant-dose-calculator.herokuapp.com/).
+A live app can be found [here](https://waterchanel.herokuapp.com/).
 
 ![app preview](images/screenshot.jpg)
 
