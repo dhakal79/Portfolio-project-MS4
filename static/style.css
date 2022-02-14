@@ -1,16 +1,17 @@
 body{
-    background-color: whitesmoke;
+    background-color: rgb(37, 230, 19);
 }
 .fa, .fab, .fad, .fal, .far, .fas {
     margin-inline: 50px;
-    margin-left: 10px;   
+    margin-left: 50px;   
 }
+
 .title{
     font-size: 25px;
 }
 .category{
-    line-height: 25px;
-    color: rgb(83, 53, 7);
+    line-height: 50px;
+    background-color: rgb(83, 53, 7);
     margin: 10px;   
 }
 
