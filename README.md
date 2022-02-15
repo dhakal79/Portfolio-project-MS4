@@ -8,42 +8,39 @@ freshwater becomes more challenging in the semi-arid regions. However, in other 
 
 The overall aim of this project is to develop open access water channel blog with an objective to share the ideas and solutions to address global water issues. All the water practictioner from all over the world (including professional, students) can be a member of the community in the blog. 
 
-A live app can be found [here](https://waterchanel.herokuapp.com/).
+A live water channel blog can be found [here](https://waterchanel.herokuapp.com/).
 
-![app preview](images/screenshot.jpg)
+![blog preview](media/image/blogpreview.jpg)
 
 # Table of Contents
- [1. About the coagulant calculaor app](#coagulant-app)
+ [1. About the Water Channel Blog](#water-blog)
 
  [2. User Expereince (UX) design](#ux)
   - [User Goals:](#user-goals)
+  - [Blog Design thinking:](#user-stories)
 
- [3. Flow chart](#flow-chart)
-
- [4. Features](#features)
+  [3. Features](#features)
  - [Existing features](#exist-feature)
  - [future features](#future-feature)
 
- [5.Technologies used](#technologies-used)
+ [4.Technologies used](#technologies-used)
 
- [6.Testing](#testing)
+ [5.Testing](#testing)
 
- [7.Bugs](#bugs)
+ [6.Bugs](#bugs)
 
- [8. Deployment](#deployment)
+ [7. Deployment](#deployment)
 
- [9. How does the app works?](#play-app)
+ [8. How does the blog works?](#blog-work)
 
- [10. Acknowledgement](#acknowledgement)
+ [9. Acknowledgement](#acknowledgement)
 
-  <a name="coagulant-app"></a>
+  <a name="water-blog"></a>
 
-# 1. About the coagulant calculator app
+# 1. About the Water Channel Blog
   [Go to the top](#table-of-contents)
 
-This app is designed to calcualte the optimum coagulant dose that need to be applied in a water treatment plant based on the raw water quality.The app determine the optimum dose based on the laboratory data from google sheet. The app also calcualte the total amount ot dose needed based on the type of coagulant used, optimum dose and user input (flow rate and storage time of the coagulant). The app can be used by the plant operator, students and water supply engineering professonals.
-
-
+This water channel blog is desinged as a a platform where water professional and students can share the expereince and ideas to solve the water related issues in the world. It can also be used as a knowledge sharing platform.  
    <a name="ux"></a>
 # 2. User Expereince (UX) design
   [Go to the top](#table-of-contents)
@@ -62,6 +59,26 @@ The following users types can be benifitted from the app:
 
 The main goal of this project is to develop a coagulant dose calcualtor app that allows to calcualte the optimum coagulant dose for diffent water types. This is of great useful for me to apply in my teaching for a demonstration in the laboratory session to my students.
 
+  <a name="user-stories"></a>
+## 2.1 Blog Design thinking
+  [Go to the top](#table-of-contents)
+
+The user requires certain functionality to enable the app to work as needed.
+
+- Article Detailed View
+- Create Posts
+- Login and Logout
+- Register
+- Comments
+- Like Posts
+- Edit and Delete Posts
+
+Three step processes were followed as below:
+- Set the user requirement and added to the user stories within the github project
+- After the gradual fullfilment of the requirement, the stories were moved to in progress colum.
+- And finallym when requiment was fully meet, it was moved to the complete column.
+
+![User Stories](media/image/userstories.jpg)
 
  <a name="flow-chart"></a>
 
