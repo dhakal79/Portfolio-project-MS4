@@ -3,7 +3,7 @@ from django.views.generic import (ListView, DetailView, CreateView, UpdateView, 
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 # def home(request):
 #   return render(request, 'home.html', {})
@@ -41,7 +41,10 @@ class ArticleDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
         context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
+        stuff = get_object_or_404(Post, id=self.kwargs['pk'])
+        number_of_likes = stuff.number_of_likes()
         context["cat_menu"] = cat_menu
+        context["number_of_likes"] = number_of_likes
         return context
 
 
@@ -91,7 +94,7 @@ class DeletePostView(DeleteView):
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     post.likes.add(request.user)
-    return HTTPResponseRedirect(reverse('post_details', args=[str(pk)]))
+    return HttpResponseRedirect(reverse('post_details', args=[str(pk)]))
 #class PostLike(View):
  #   def post(self, request, slug, *args, **kwargs):
  #       post = get_object_or_404(Post, slug=slug)
