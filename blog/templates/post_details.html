@@ -37,6 +37,13 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
+                <a href=" {% url 'home' %}" class=""btn btn-secondary">Back</a>
+                <br/><br/>
+                <hr>
+                <form action="{% url 'like_post' post.pk %}"method="POST">
+                    {% csrf_token %}
+                    <button type="submit", name="post_id", value ="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
+                </form>
             </div>
         </div>
     </div>
