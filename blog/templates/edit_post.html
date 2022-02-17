@@ -9,8 +9,9 @@
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="btn btn-primary">Update</button>
         </div>
+                   <img src="{{ post.featured_image.url }}" width="50%">
+            <button class="btn btn-primary">Update</button>
     {% else %}
         You are not allowed here!!
     {% endif %}
@@ -18,5 +19,8 @@
 You are not allowed here!!
 
 {% endif %}
+
+
+
 
 {% endblock %}
