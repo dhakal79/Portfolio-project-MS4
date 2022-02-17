@@ -10,7 +10,6 @@
                 {% csrf_token %}
                 {{ form.as_p }}
         </div>
-                   <img src="{{ post.featured_image.url }}" width="50%">
             <button class="btn btn-primary">Update</button>
     {% else %}
         You are not allowed here!!
