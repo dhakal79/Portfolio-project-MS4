@@ -46,9 +46,7 @@
           <a href = "{% url 'article-detail' post.pk %}"> more...
             </small>
           </a> 
-        <!-- <p class="card-text text-muted h6"><i class="far fa-heart"></i>
-{{ post.number_of_likes }}<i class="far fa-thumbs-down"></i>{{ post.number_of_dislikes }}<i class="fas fa-share"></i>{{ post.number_of_shares }}</p> 
--->
+        
       </div>
     </div>
   </div>
@@ -79,30 +77,5 @@
 </nav>
 {% endif %}
 </div>
-<!--
-<h2 class ="title">{{ cats }}</h2>
-<ul>
-{% for post in category_posts %}
-<li class = "category"><b>{{ post.title }} -</b>
-<em><small>{{ post.author.first_name }} </em></small>
-<em><small>{{ post.author.last_name }}</em> -</small>
-<em><small>{{ post.created_on }} </em></small>
-<small>
-{% if user.is_authenticated %}
-{% if user.id == post.author.id %}
-<a href="{% url 'edit_post' post.pk %}">(Edit)</a>
-<a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-{% else %}
-You are not allowed here!!
-{% endif %}
-{% endif %}
-</small><br/>  
-<em>{{ post.content| slice:":300" }}</em><a href = "{% url 'article-detail' post.pk %}">     more...</small></a>        
-</li>
-{% endfor %}
-</ul>  
-{% else %}
-<h2>the page does not exist</h2>
-{% endif %}
--->
+
 {% endblock %}                       

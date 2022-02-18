@@ -2,8 +2,8 @@
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
 <br/>
-<h1>{{ post.title }}
-</h1>
+<h2>{{ post.title }}
+</h2>
 <small>By: 
   {{ post.author.first_name }}
   {{ post.author.last_name }} -
@@ -52,15 +52,14 @@
     </div>
   </div>
 </div>
-<h2>Comments
-</h2>
+<h3 class="comment">Comments from the blog users</h3>
 <hr>
 {% if not post.comments.all %}
-No Comments Yet ...
-<a href ="{% url 'add_comment' post.pk %}">Add Comment
+<h3 class="comment-2">The blog post has no comments yet ...</h3>
+<a href ="{% url 'add_comment' post.pk %}"> Please provide comment
 </a>
 {% else %}
-<a href ="{% url 'add_comment' post.pk %}">Add Comment
+<a href ="{% url 'add_comment' post.pk %}">Please provide comment
 </a>
 <br/>
 {% for comment in post.comments.all %}
