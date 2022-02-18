@@ -91,35 +91,46 @@ Three step processes were followed as below:
 <a name="exist-feature"></a>
 
 ## 3.1 Existing Feature
-## Navbar
 
-The website has a multi-functional navbar that allows the user to "Add Post", "Choose Category", "Edit Profile", Login and Logout respectively.
+### 3.1.1 Navigation bar:
+Water Channel included naviagation bar that include; 
+- My water channel (Home page)
+- Register
+- Login 
+- categories 
 
-![](static/Media/images/navbar_user.JPG)
+Any users has an ability to view the home page, page detail view, register in the webpage and login as registered user.
+![Nav bar](media/image/navbar-1.jpg)
 
-The Admin user also has an additional button "Add Category". This allows the Admin to add aditional Categories as they see fit.
+Once the users are registered and login in the page the naviagation bar has more functionality to add post, categories the post, edit and delete own post of the user as well as has an access to like other users post.
 
-![](static/Media/images/navbar_admin.JPG)
+ ![Nav bar](media/image/navbar-2.jpg)
 
-If a User is not logged in the navbar shows different options "Home", "Register" and "Login".
+- Social media links (for facebook, Linkden, Twitter and Youtube) are placed at the bottom of the each page in the footer. All the links will open in a new tab. 
+- At the bottom of each it is written By Nirajan Dhakal, 2022 
 
-![](static/Media/images/register_login_navbar.JPG)
+### 3.1.2 Django admistration page
 
-## Home Page
+The admin page is also created where the administration also has the ability to post, edit the blog, which include django summernote function. While posting the new post admin should write title, slug (automatically populated), author name (based on registration), attached image, and text area for exerpt, contet of the blog. It also has an option to choose the category of new post, and finally status as draft or published. 
 
-The homepage is where all of the posts are shown to the user. They are added to the page showing the most recent post first. The user is able to click the "View Post" button to view the detailed version of the post.
+![Nav bar](media/image/django-admin.jpg)
 
-![](static/Media/images/homepage.JPG)
+### 3.1.3 Home Page (My water channel)
 
-## Login and Register
+The channel has homepage where it listed the recent summary of recent posts with title and short text including picture. Once the user likes the post, there is an option to click more to redirect to the post detail page.
+
+![Home Page](media/image/home-page-1.jpg)
+
+Home page is design with functality of pagination. Each page only show 6 posts and there is a NEXT button at the bottom of page to go to the next page. The next page then has the PREVIOUS button to go back to the previous page.
+
+![Home Page](media/image/home-page-2.jpg)
+
+### 3.1.4 Login and Register
 
 The user is able to register, login and logout using the navbar navigation buttons. Each creating a new view or form to allow the user to login, logout or register.
 
-![](static/Media/images/register.JPG)
 
-![](static/Media/images/login.JPG)
-
-## Comment
+### 3.1.5 Comment the post
 
 Registered Users are able to comment on each post within the app but only when logged in.
 
@@ -132,7 +143,7 @@ When a user is not logged in they are unable to comment.
 
 ![](static/Media/images/comment_not_registered.JPG)
 
-## Like
+## 3.1.6 Like the post
 
 Registered Users are able to like each post within the app but only when logged in.
 
@@ -144,7 +155,7 @@ When liked the number of likes are added to the number of likes view.
 
 The like button also chnages colour to Red and allows the user to press again to Unlike.
 
-## Post
+### 3.1.7 Add Post in webbrowser
 
 Registered Users are able to create their own posts within the app but only when logged in. They can do this from the Add Post button within the navbar
 
@@ -172,7 +183,7 @@ Each post is automatically stamped with the date of when the posts were uploaded
 
 ![](static/Media/images/post_view_home.JPG)
 
-## Edit and Delete Post
+### 3.1.8 Edit and Delete Post
 
 Registered Users are able to edit or delete their own posts within the app but only when logged in.
 
@@ -182,7 +193,7 @@ When a user is not registered or logged in they are not shown the "Edit Post" or
 
 ![](static/Media/images/delete_post_logged_out.JPG)
 
-## Categories
+### 3.1.9 Add Categories of the post
 
 Each post is given a category by choosing from the scroll down menu when creating a post. Each post is then added to the corresponding category list enabling the user to choose a category and view all posts within.
 
@@ -192,18 +203,7 @@ There is also a dropdown menu within the navbar to allow the user to choose a ca
 
 ![](static/Media/images/categories_dropdown.JPG)
 
-## Edit Profile
-
-Users are able to change their username, email and password from the "Edit Profile" page. 
-
-![](static/Media/images/edit_profile.JPG)
-
-the "Change Password" button takes the user to a new form where they are able to change their password.
-
-![](static/Media/images/change_password.JPG)
-
-# 
-
+<a name="future-feature"></a>
 ## Future Features
 
 - Profile page to include bio and profile picture.
@@ -211,12 +211,8 @@ the "Change Password" button takes the user to a new form where they are able to
 
 #
 
-<a name="future-feature"></a>
 
-## 3.2 Future Feature
-In future i plan to update the app including more features such as;
- - Allow users to select option for choosing differnt types of coagulants like FeCl3, NaOCl, Al2SO4 etc
- - Provide users the basic dimension of the coagulation unit required for the given type of the water
+
 
 <a name="technologies-used"></a>
 
