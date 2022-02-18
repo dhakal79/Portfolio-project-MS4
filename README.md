@@ -45,33 +45,33 @@ This water channel blog is desinged as a a platform where water professional and
 # 2. User Expereince (UX) design
   [Go to the top](#table-of-contents)
 
-  Dosing of coagulant (chemical) i.e. FeCl3 is needed to remove the fine particles from drinking water treatment. Moreover, overdosing of the chemicals will support for the resuspension of partcles and is also an environmental issues. Therefore, optimization of the coagulant dose based on the water qaulity is rather important which save cost and environment. This project is aimed to design the app which allows to calcualte the optimum coagulant dose based on the experimental data provided in google sheet and ultimately calcualte the total dose required depending upon the type of coagulant used. 
+  Water crisis is now a global issue which can be address by joint efforts from professional working in this field. Therefore, knowledge, expereience sharing among professional is important to save the resources and time to solve the water issue. This project is thus aimed to design the user friendly water channel app which allows all water professional to register and participate in sharing the knowledge and experience.  
 
 The following users types can be benifitted from the app:
 
-- Drinking water treatment plant operators
-- Professionals dealing with water treatment designs.
-- Post graduate students in the field of water supply and environmental engineering.
+- Water professionals
+- Students in field of water.
+- University to consider as a learning platform for sharing the expereince as case study.
 
    <a name="user-goals"></a>
 ## 2.1 User Goals
   [Go to the top](#table-of-contents)
 
-The main goal of this project is to develop a coagulant dose calcualtor app that allows to calcualte the optimum coagulant dose for diffent water types. This is of great useful for me to apply in my teaching for a demonstration in the laboratory session to my students.
+The main goal of this project is to develop user friendly water channel blog . This is of great useful for me to apply in my teaching as a discussion platform with students.
 
   <a name="user-stories"></a>
 ## 2.1 Blog Design thinking
   [Go to the top](#table-of-contents)
 
-The user requires certain functionality to enable the app to work as needed.
-
-- Article Detailed View
-- Create Posts
+The following design thinking were kept in mind while desiging this channel. 
 - Login and Logout
 - Register
+- Create Posts
+- Category the post 
+- Article Detailed View
 - Comments
 - Like Posts
-- Edit and Delete Posts
+- Edit and Delete Posts (own post)
 
 Three step processes were followed as below:
 - Set the user requirement and added to the user stories within the github project
