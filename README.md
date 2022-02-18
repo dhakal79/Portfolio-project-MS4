@@ -127,29 +127,24 @@ Home page is design with functality of pagination. Each page only show 6 posts a
 
 ### 3.1.4 Login and Register
 
-The user is able to register, login and logout using the navbar navigation buttons. Each creating a new view or form to allow the user to login, logout or register.
+The user is able to register, login and logout using the navbar navigation buttons using a new view or form to allow the user to login, logout or register. The users have an full access to post/edit/update/delate the post once they register and login.
 
 
 ### 3.1.5 Comment the post
 
-Registered Users are able to comment on each post within the app but only when logged in.
+It is allowed to registered Users to comemnt on their and other users post and is only possible when they logged in. The comment can be made in the post detail page. 
 
-![](static/Media/images/add_new_comment.JPG)
-By clicking the Add Comment button the user is directed to the add comment form where they can create their comment and add to the existing post.
+![Home Page](media/image/comment.jpg)
 
-![](static/Media/images/add_comment.JPG)
+The user can write a comment about the blog by clicking on please provide comments. The name, date and time of comment will appear on the comment box.
 
-When a user is not logged in they are unable to comment.
-
-![](static/Media/images/comment_not_registered.JPG)
+![Home Page](media/image/add-comment.jpg)
 
 ## 3.1.6 Like the post
 
-Registered Users are able to like each post within the app but only when logged in.
+Registered Users are able to like post of theirs and other user's post but only when they are logged in. The total number of likes will be recorded on the post. This provides an opportuntiy to know how popular is the post. 
 
-![](static/Media/images/like_post.JPG)
-
-When liked the number of likes are added to the number of likes view.
+![Home Page](media/image/like-post.jpg)
 
 ![](static/Media/images/number_of_likes.JPG)
 
