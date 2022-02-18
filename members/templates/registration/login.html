@@ -1,29 +1,26 @@
 {% extends 'base.html' %}
 {% block title %}Login{% endblock %}
 {% block content %}
-
-
-<h1>Login...</h1>
-<br/><br/>
-
-<div class = "form-group">
-    <form method="POST">
-        {% csrf_token %}
-
-<div class="mb-3">
-    <input type="text" class="form-control" name="username" placeholder="Username">
-</div>
-
-<div class="mb-3">
-    <input type="password" class="form-control" name="password" placeholder="password">
-          </div>
+<h2 class ="register">Please login here to have full access to the water channel blog
+</h2>
 <br/>
-      
-        <button class="btn-secondary">Login</button>
-    </form>
+<br/>
+<div class = "form-group">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <input type="text" class="form-control" name="username" placeholder="Username">
+    </div>
+    <div class="mb-3">
+      <input type="password" class="form-control" name="password" placeholder="password">
+    </div>
+    <br/>
+    <button class="btn-secondary">Login
+    </button>
+  </form>
 </div>
-
-<div id="emailHelp" class="form-text">Not a registered user? Register <a href="{% url 'register' %}">here...</a></div>
-
-
+<div id="emailHelp" class="form-text">Not a registered user? Register 
+  <a href="{% url 'register' %}">here...
+  </a>
+</div>
 {% endblock %}

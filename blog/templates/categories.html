@@ -12,9 +12,9 @@
           <div class="image-container">
             {% if "placeholder" in post.featured_image.url %}
             <img class="card-img-top"
-                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="image for {{ post.title }}">
             {% else %}
-            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="water">
+            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="image for {{ post.title }}">
             {% endif %}
           </div>                    
           <h2 class="card-title">{{ post.title }}

@@ -1,19 +1,37 @@
 body{
     background-color: whitesmoke;
 }
-.fa, .fab, .fad, .fal, .far, .fas {
-    margin-inline: 50px;
-    margin-left: 50px;   
-}
 
+/* Home page and category page */
+.recent-post{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #1d0462;
+}
+.card-title{
+   font-size: 23px; 
+}
 .title{
     font-size: 25px;
+    color: #1d0462;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
-.category{
-    line-height: 50px;
-    background-color: rgb(83, 53, 7);
-    margin: 10px;   
+/* Member registration page */
+
+.register{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #1d0462;
 }
 
+    /* Add post page */
 
-    
+.add-post{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #1d0462;
+}
