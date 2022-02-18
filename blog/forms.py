@@ -21,6 +21,7 @@ class PostForm(forms.ModelForm):
             'category': forms.Select(choices= choice_list, attrs={'class': 'form-control'}),
             'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
+            #'content': forms.CharField(widget=SummernoteWidget()),
             'status': forms.Select(attrs={'class': 'form-control'}),       
      
         }
