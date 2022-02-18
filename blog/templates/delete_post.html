@@ -2,8 +2,14 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}  
-<h1>Delete Blog Post
-</h1>
+<h2 class ="update-post">Here you can delete the blog post</h2>
+<h3 class ="instruction"> Please follow the intructions while posting in a blog</h3>
+<ul class ="instruction">
+  <em>
+    <li> This option of delete is only active for register user</li>
+    <li>You can only delete your post</li>
+  </em>
+</ul>
 <br/>
 <div class ="form-group">
   <form method="POST">

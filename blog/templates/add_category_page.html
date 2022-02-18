@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-<h1>Add Category
-</h1>
+<h2 class ="add-category">Please add category that link to your blog post </h2>
+<h3 class ="instruction"> Please follow the intructions while creating a category</h3>
+<ul class ="instruction">
+  <em>
+    <li>Create new category ONLY if there is not in the categories in the home page</li>
+    <li>Category shpould be related to the water topics</li>
+  </em>
+</ul>
 <br/>
 <div class="form-group">
   <form method="POST">

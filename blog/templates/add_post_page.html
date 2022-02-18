@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-<h2 class ="add-post">Please add blog post as register water channel user
-</h2>
-<h3 class ="instruction">
-  
-</h3>
+<h2 class ="add-post">Please add blog post as register water channel user</h2>
+<h3 class ="instruction"> Please follow the intructions while posting in a blog</h3>
+<ul class ="instruction">
+  <em>
+    <li>Provide the title of the blog</li>
+    <li>Provide slug for the post (can be two words dervided from title and separated by hyphen</li>
+    <li>Choose authorship and category of the post</li>
+    <li>Attached image related to the blog post</li>
+    <li>Write the content of the blog</li>
+    <li>Choose the status as published</li>
+  </em>
+</ul>
 <br/>
 <div class="form-group">
   <form method="POST" enctype="multipart/form-data">

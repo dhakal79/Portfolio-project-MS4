@@ -35,3 +35,26 @@ body{
     padding-bottom: 10px;
     color: #1d0462;
 }
+.instruction{
+    font-size: 15px;
+    color: #62041b;
+    margin-bottom: 2px;
+}
+
+  /* Add post page */
+
+
+  .add-category{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #1d0462;
+  }
+
+  /* Edit post page */
+  .update-post{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #1d0462;
+  }
