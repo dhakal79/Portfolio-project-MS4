@@ -91,34 +91,125 @@ Three step processes were followed as below:
 <a name="exist-feature"></a>
 
 ## 3.1 Existing Feature
-### 3.1.1 APP link to google sheet data
-- App calcualtion is linked to the google sheet data. The google sheet access is given using google API.
-- Google sheet has four worksheet named phRAW, pHRAW2, pHRAW3, pHRAW4 where mainly the experimental data at differnt conditions are stored.The sheet also has worksheet name "dose" where mainly the data calcualted by app based on user input data will be stored (see in Figure below).
-- App has a fature to validate the data provided in the google sheet.
+## Navbar
 
-![googlesheet](images/google-sheet.jpg)
+The website has a multi-functional navbar that allows the user to "Add Post", "Choose Category", "Edit Profile", Login and Logout respectively.
 
-### 3.1.2 Start of APP 
-- Has a short introduction about the app to the user 
-- App ask user to provide the input data mainly flow rate in m3/s and storage time in months. 
-![introduction](images/feature-a.jpg)
+![](static/Media/images/navbar_user.JPG)
 
-### 3.1.3 User data input validation and error checking
-  - Users has to enter data input either in float or integer 
-  - User cannot provide input zero or negative
-  - User should provide a data input i.e. a number
+The Admin user also has an additional button "Add Category". This allows the Admin to add aditional Categories as they see fit.
 
-![user_validation](images/user-validation.jpg)
+![](static/Media/images/navbar_admin.JPG)
 
-### 3.1.4 App calcualtion
-  - App calcualte the optimum coagulant dose for all experimental conditions based on data input in google sheet
-  - Based on the optimum dose calculated and user's input data, app calcualte the coagulant dose needed for differnt types of coagulants used
-![dose_calcualtion](images/app-calculation.jpg)
+If a User is not logged in the navbar shows different options "Home", "Register" and "Login".
 
-### 3.1.5 Google data sheet update
-  - user's input data and app calcualted data is updated in the new row in the google sheet
+![](static/Media/images/register_login_navbar.JPG)
 
-![update_google_data_sheet](images/dose-calulation-.jpg)
+## Home Page
+
+The homepage is where all of the posts are shown to the user. They are added to the page showing the most recent post first. The user is able to click the "View Post" button to view the detailed version of the post.
+
+![](static/Media/images/homepage.JPG)
+
+## Login and Register
+
+The user is able to register, login and logout using the navbar navigation buttons. Each creating a new view or form to allow the user to login, logout or register.
+
+![](static/Media/images/register.JPG)
+
+![](static/Media/images/login.JPG)
+
+## Comment
+
+Registered Users are able to comment on each post within the app but only when logged in.
+
+![](static/Media/images/add_new_comment.JPG)
+By clicking the Add Comment button the user is directed to the add comment form where they can create their comment and add to the existing post.
+
+![](static/Media/images/add_comment.JPG)
+
+When a user is not logged in they are unable to comment.
+
+![](static/Media/images/comment_not_registered.JPG)
+
+## Like
+
+Registered Users are able to like each post within the app but only when logged in.
+
+![](static/Media/images/like_post.JPG)
+
+When liked the number of likes are added to the number of likes view.
+
+![](static/Media/images/number_of_likes.JPG)
+
+The like button also chnages colour to Red and allows the user to press again to Unlike.
+
+## Post
+
+Registered Users are able to create their own posts within the app but only when logged in. They can do this from the Add Post button within the navbar
+
+![](static/Media/images/navbar_user.JPG)
+
+The user is directed to the Add Post form where they can create their Blog Post. There are 5 sections to the form.
+
+Title - a text field to allow user text input.
+Title Tag - a text field to allow user text input.
+Category - a dropdown menu to allow the user to choose which category they wish their post to sit within.
+Body - Text Editor to allow text input
+Image - Allows for user to upload images to their posts
+
+![](static/Media/images/add_post_form.JPG)
+
+The form uses a Text Editor to provide the user with a better UX and also allows for different fonts, Bold Text, Italic Text etc.
+
+![](static/Media/images/text_editor.JPG)
+
+Once the Post has been created the user clicks the "Post" button to upload their post to the home page of the web app.
+
+## Date
+
+Each post is automatically stamped with the date of when the posts were uploaded.
+
+![](static/Media/images/post_view_home.JPG)
+
+## Edit and Delete Post
+
+Registered Users are able to edit or delete their own posts within the app but only when logged in.
+
+![](static/Media/images/edit_delete_post.JPG)
+
+When a user is not registered or logged in they are not shown the "Edit Post" or "Delete Post" buttons.
+
+![](static/Media/images/delete_post_logged_out.JPG)
+
+## Categories
+
+Each post is given a category by choosing from the scroll down menu when creating a post. Each post is then added to the corresponding category list enabling the user to choose a category and view all posts within.
+
+![](static/Media/images/blog_categories.JPG)
+
+There is also a dropdown menu within the navbar to allow the user to choose a category to view from the homepage.
+
+![](static/Media/images/categories_dropdown.JPG)
+
+## Edit Profile
+
+Users are able to change their username, email and password from the "Edit Profile" page. 
+
+![](static/Media/images/edit_profile.JPG)
+
+the "Change Password" button takes the user to a new form where they are able to change their password.
+
+![](static/Media/images/change_password.JPG)
+
+# 
+
+## Future Features
+
+- Profile page to include bio and profile picture.
+- Comments to automatically populate the username instead of adding name to form.
+
+#
 
 <a name="future-feature"></a>
 
