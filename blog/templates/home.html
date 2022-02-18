@@ -25,9 +25,9 @@
           <div class="image-container">
             {% if "placeholder" in post.featured_image.url %}
             <img class="card-img-top"
-                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="blogpost" >
+                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="image for {{ post.title }}" >
             {% else %}
-            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="blog">
+            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="image for {{ post.title }}">
             {% endif %}
           </div>                    
           <h2 class="card-title">{{ post.title }}
