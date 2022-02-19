@@ -2,7 +2,8 @@
 {% block content %}
 {% if category_posts %}
 <div class="container-fluid">
-  <h2 class ="title">{{ cats }}</h2>
+  <h2 class ="title">{{ cats }}
+  </h2>
   <div class="row">
     {% for post in category_posts %}
     <div class="col-md-4">
@@ -27,7 +28,6 @@
             </em>
           </small>
           <br/>
-          
           <small>
             {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
@@ -37,8 +37,8 @@
             </a>
             {% else %}
             You are not allowed here!! 
-          {% endif %}
-          {% endif %}
+            {% endif %}
+            {% endif %}
           </small>
           <br/>  
           {{ post.content| slice:":200" }}
@@ -48,10 +48,11 @@
       </div>
     </div>
   </div>
-{% endfor %}
-{% else %}
-<h2>the page does not exist</h2>
-{% endif %}
+  {% endfor %}
+  {% else %}
+  <h2 class ="add-post">This category has no blog post yet. Please visit later
+  </h2>
+  {% endif %}
 </div>  
 {% if is_paginated %}
 <nav aria-label="Page navigation">
