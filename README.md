@@ -31,9 +31,7 @@ A live water channel blog can be found [here](https://waterchanel.herokuapp.com/
 
  [7. Deployment](#deployment)
 
- [8. How does the blog works?](#blog-work)
-
- [9. Acknowledgement](#acknowledgement)
+[8. Acknowledgement](#acknowledgement)
 
   <a name="water-blog"></a>
 
@@ -154,29 +152,7 @@ The like button also chnages colour to Red and allows the user to press again to
 
 Registered Users are able to create their own posts within the app but only when logged in. They can do this from the Add Post button within the navbar
 
-![](static/Media/images/navbar_user.JPG)
-
-The user is directed to the Add Post form where they can create their Blog Post. There are 5 sections to the form.
-
-Title - a text field to allow user text input.
-Title Tag - a text field to allow user text input.
-Category - a dropdown menu to allow the user to choose which category they wish their post to sit within.
-Body - Text Editor to allow text input
-Image - Allows for user to upload images to their posts
-
-![](static/Media/images/add_post_form.JPG)
-
-The form uses a Text Editor to provide the user with a better UX and also allows for different fonts, Bold Text, Italic Text etc.
-
-![](static/Media/images/text_editor.JPG)
-
-Once the Post has been created the user clicks the "Post" button to upload their post to the home page of the web app.
-
-## Date
-
 Each post is automatically stamped with the date of when the posts were uploaded.
-
-![](static/Media/images/post_view_home.JPG)
 
 ### 3.1.8 Edit and Delete Post
 
@@ -186,28 +162,17 @@ Registered Users are able to edit or delete their own posts within the app but o
 
 When a user is not registered or logged in they are not shown the "Edit Post" or "Delete Post" buttons.
 
-![](static/Media/images/delete_post_logged_out.JPG)
-
 ### 3.1.9 Add Categories of the post
 
 Each post is given a category by choosing from the scroll down menu when creating a post. Each post is then added to the corresponding category list enabling the user to choose a category and view all posts within.
 
-![](static/Media/images/blog_categories.JPG)
-
 There is also a dropdown menu within the navbar to allow the user to choose a category to view from the homepage.
-
-![](static/Media/images/categories_dropdown.JPG)
 
 <a name="future-feature"></a>
 ## Future Features
 
 - Profile page to include bio and profile picture.
 - Comments to automatically populate the username instead of adding name to form.
-
-#
-
-
-
 
 <a name="technologies-used"></a>
 
@@ -234,31 +199,33 @@ There is also a dropdown menu within the navbar to allow the user to choose a ca
 
 # 5. Testing
   [Go to the top](#table-of-contents)
-
+## 5.1 General
 - Throughout the development of the water channel blog I have tested each View, Model and URL together after each one had been written. 
-- Any changes in the models
-After migrating any models I would run the server whilst writing the code for the views and urls and watch the terminal show up any errors whilst writing the code. This would enable me to generally notice an issue in real time.
-- Once the URL's were written and implemented as links within the app I would test each one to ensure that they worked correctly and directed me to the required page.
-- The links were again tested in the final stages of development.
-- Forms were also tested in the final stages to ensure that hey work as should. I registered multiple accounts and then deleted to ensure that this functionality works as it should. All error messages displayed and user information displayed as should also.
-- Additional manual testing of the finished app included using dev tools to render the webpages within a mobile phone screen. Due to using bootstrap this functionality is automatic meaning less coding for different viewports.
-## 6.1 PEP8 online validation
-  I have tested this project manually by passing the code through PEP8 online validation tool and confirmed there are no errors. The screenshot is as shown below:
-  ![PEP8_online_validation](images/pep8_online.jpg)
-## 6.2 Mannual testing 
-### 6.2.1 Google sheet
-TEST            | OUTCOME                          | PASS / FAIL  
---------------- | -------------------------------- | ---------------
-Google sheet | checked if the data provided in the google sheet is either float number or integer only except table heading. If that is not true then a message pop up "google sheet data is not valid ! Please check the data entry".| PASS
+- Any changes made in the models, I performed makemigrations and migrate. In the sametime, code for view.py and urls were also written and run the server to check if there are issues or not. I checked if the url written directed to the right page that i am expecting or not. 
+- All the pages were manullay tested and well the the code written were validated using W3C validator (for Html), PEP8 online (Python) and Jigsaw (CSS). the details of each testing are summarized below.
+## 5.2 W3C, Jigsaw and PEP8 online validation
+  I have tested this project manually by passing the code through W3C, JigSaw and PEP8 online validation tool and confirmed there are no errors. The screenshot is as shown below:
+  for W3C validation
+  for Jigsaw validation
+  for PEP8 validation
+## 5.3 Mannual testing 
 
-## 6.2.2 User input 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-User input | checked if the data provided by user is either integer or float or positive. In case not true then it gives an error message "Please enter numeric value greater than 0" and "Enter value can't be zero or negative, try again". This message po up until the correct input value is provided by user.| PASS
-Optimum coagulant dose calculation | checked if the app calcualte the correct optimum coagulant dose or not for all four given conditions based on the google sheet data and criteria used. | PASS
-Total coagulant dose calculation based on user input| checked if all the total coagulant dose calulated by the app based on the users input data and app calcualted optimum coagulant dose is correct or not. | PASS
-Update google sheet | checked if the data calculated by the app and users input data is updated or not in the googlesheet. | PASS
-Update google sheet data in new row | Checked if the data updated in the google sheet is not overwrtten the previously recorded data but instead it is recorded in the new row| PASS
+Water Channel(Home page) | checked if on click to "Water Channel", the browser redirects me to the Water Channel "home page".| PASS
+Water Channel(Home page) | checked if recent posted blog appear on the the front page of home page or not.| PASS
+Pagination | checked if there appears 6 blog posts in "Water Channel" home page or not. And after clicking to the button NEXT goes to the other pages where other additional blog posts appears.| PASS
+Pagination | checked if bby clicking "PREVIOUS" button redirect to the previous page or not.| PASS
+Detail page | checked if my clicking "more" on home page of each blog post redirect to the detail page or not.
+| PASS
+Detail page| checked if button "back" in detail page redirect to home page or not.| PASS
+Post like| checked if registered user can like to blog post or not and registered the number of likes.| PASS
+Comment | checked if on clicking "please provide comment" redirect to comment form page or not.| PASS
+Comment | checked if registered user can comment ont he post or not and their comments appears on the detail blog page with name and date of comment.| PASS
+Register/login|checked if users can register and login in the blog or not".| PASS
+Edit/Delete post |checked if the post can be edited and deleted by the authorized resitered user only or not.| PASS
+Catergory | checked if on click to each "Category", the browser redirects me to the the respective category page.| PASS
+
 
 <a name="bugs"></a>
 
@@ -266,10 +233,25 @@ Update google sheet data in new row | Checked if the data updated in the google 
   [Go to the top](#table-of-contents)
 
 ## 7.1 Solved bugs
-- When i wrote the project, i had most frequently indentation error as i forget to provide a tab
-- The data input by users and app calcualted results were overwritten in the google sheet with the previously recorded data. this was solved by writing a code to save the evry new data entry and app calcualtion in a new row.
-- When i wrote if statement, i forget to add colon at the end of if statement, which gave me unexpected indentation error. 
-- I want to display the calcualted data in bullet points in the app but it took all the data from google sheet (including headings and data). This was solved by using pretty_array package.
+- The update on static css did not show up in the page after heroku deployment. This was solved by chaning below;
+
+    In setting.py
+
+      1. debug = "DEVELOPMENT" in os.environ
+
+        In, env.py add,
+
+      2. os.environ["DEVELOPMENT"] = "true"  and 
+
+    In Heroku setting remove:
+
+      3. DISABLE_COLLECTSTATIC          1  
+
+- The update in static CSS did not change in gitpod environment as well. This was solved by adding missing '/' STATIC URL = 'static/'
+
+- The detail page edit did not work and it says the page cannot be reached. this was solved by adding missing '%' 
+before url in the link below:
+<a href="{ url 'edit_post' post.pk %}">(Edit)</a>
 
 ## 7.2 Unsolved bugs
 No bugs remaining 
@@ -279,63 +261,24 @@ No bugs remaining
 # 8. Deployment
   [Go to the top](#table-of-contents)
 
-  The proejct was deployed to Heroku using the following steps:
-- Sign up to Heroku and give a unique name to the app
-- Inside the Heroku app page, go to the setting first and in the section config vars, add CREDS and paste entire creds.json file
-- Add buildpack python and node.js (python on top and node.js on bottom)
-- Go to the diploy section and select github and click connect to github
-- Search git hub repository name related to the project to be depoloyed and click connect 
-- Deploy to the branch (either mannual or automatic)
+  The project was deployed to GitHub and pushed throughout the devlopment process. The project was also deployed to Heroku in the early stages of development to ensure that there weren't any issues later on in the project.
+Auto deploy was selected within Heroku to ensure that each push from GitHub would push and deploy to Heroku.
 
- <a name="play-app"></a>
+## Method of Deployment
 
-# 9. How does the app works?
-  [Go to the top](#table-of-contents)
+- In Heroku create new app 
+- Added database to app using "Heroku Postgres"
+- Set environment variables in env.py, "DATABASE_URL" and "SECRET_KEY"
+- Copy DATABASE_URL to Settings.py
+- Copy SECRET_KEY to Settings.py
+- Migrate Changes
 
-## 9.1 Google data access and validation
-The app has a credential to access google data sheet . The app validates the data input in the google sheet. If the data entry in google sheet is not correct the app gives a message"Google sheet data is not valid. Please check the data entry" (see figure below where data input is not valid in google sheet (highlighted)). Moreover the app users do not have to do anything to the google sheet.
+ <a name="acknowledgement"></a>
 
-![google-sheet-validation](images/google-sheet-validation.jpg)
-
-## 9.2 Start of the APP
-When the users run the coagulant dose calcualtor Heroku  app,
-- It first display the what the app is about.
--  Ask user to enter flow rate in m3/s and do the validation of the data. 
-- After validation of first input data, the user is asked to provide second input data i.e., storage time. The app does the validation of this second input as well.
-
-![user-input](images/user-input.jpg)
-
-## 9.3 Validation of user input
-App validate the user's input data both flow rate and storage time (is data integer, float, and greater than 0). If data is not correct it ask users multiple time to provide correct input.
-
-![user_validation](images/user-validation.jpg)
-
-## 9.4 App calcualtion
-
-If user's input data is validate, the program runs and calcualte the following:
-- Optimum coagulant dose for all conditions.
-- Total coagulant dose (for differnt type of coagulant used i.e. FeCl3) is calcualted based on the optimum coagulant dose and users input data of flow rate and storage time. This is calculated for all four types of conditions like pHRAW, pHRAW2, pHRAW3 and pHRAW4.
-
-![app_calculation](images/calculation.jpg)
-
-## 9.5 Google data sheet update 
-All the new calcualtion and user's input data are updated in the google sheet 
-- no overwritten with previous data entry is allowed, 
-- data should be entered in new row
-- in each simualtion four rows will be added for four differnt types of experimental conditions (pHRAW, pHRAW2, pHRAW3 and pHRAW4)
-- Experimental condition is also recored in the last column to understand which data belong to what experiemntal condtions
-
-![google-update](images/google-update.jpg)
-
-## 9.6 Re-start the program 
-To run the programm again, user has to click again run the programme.
-
-
-<a name="acknowledgement"></a>
-
-# 10. Acknowledgement
+# 9. Acknowledgement
   [Go to the top](#table-of-contents)
 
 
-* Inspired from love sandwitch project from the code institute course
+* Inspired from Hello Django and I think I can blog project from the code institute course
 * Thanks to my mentor Marcel Mulders for his constructive feedback
+* Thanks to Youtube videos and especially to Codemy.com videos on Django projects
