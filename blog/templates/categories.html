@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if category_posts %}
+{% if article_list %}
 <div class="container-fluid">
   <h2 class ="title">{{ cats }}
   </h2>
   <div class="row">
-    {% for post in category_posts %}
+    {% for post in article_list %}
     <div class="col-md-4">
       <div class="card mb-4">
         <div class="card-body">

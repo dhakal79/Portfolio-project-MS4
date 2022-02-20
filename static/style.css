@@ -71,3 +71,25 @@ body{
     font-size: 15px;
     color: #e60637;
   }
+
+  .card-img-top{
+    height: 200px;
+  }
+
+  .card-body{
+    height: 450px;
+  }
+
+
+  /*For screen size max width 767 px */
+
+@media screen and (max-width: 767px) {
+
+  .card-body{
+    height: 550px;
+  }
+
+  .card-body.post-detail {
+    height: unset;
+  }
+}

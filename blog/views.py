@@ -4,6 +4,9 @@ from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy, reverse
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 
 # def home(request):
 #   return render(request, 'home.html', {})
@@ -22,14 +25,43 @@ class HomeView(ListView):
         context["cat_menu"] = cat_menu
         return context
 
+class CategoryView(ListView):
+    model = Category
+    #queryset = Post.objects.filter(category__icontains=cats.replace("-", " "))
+    template_name = "categories.html"
+    ordering = ["-id"]
+    paginate_by = 6
+    
 
-def CategoryView(request, cats):
+    def get_context_data(self, *args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(CategoryView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        category_slug = self.kwargs["cats"]
+        context["cats"] = category_slug
+        #context["category_list"] = Post.objects.filter(category__icontains=category_slug.replace("-", " "))
+
+        articles = Post.objects.filter(category__icontains=category_slug.replace("-", " "))
+        paginator = Paginator(articles, self.paginate_by)
+
+        page = self.request.GET.get('page')
+
+        try:
+            articles = paginator.page(page)
+        except PageNotAnInteger:
+            articles = paginator.page(1)
+        except EmptyPage:
+            articles = paginator.page(paginator.num_pages)
+        context["article_list"] = articles
+        return context
+
+""" def CategoryView(request, cats):
     category_posts = Post.objects.filter(category__icontains=cats.replace("-", " "))
     cat_menu = Category.objects.all()
     ordering = ["-id"]
     paginate_by = 6
     return render(request,"categories.html",{"cats": cats.title().replace("-", " "), "category_posts": category_posts, "cat_menu": cat_menu},
-    )
+    ) """
     
 
 class ArticleDetailView(DetailView):
@@ -43,6 +75,7 @@ class ArticleDetailView(DetailView):
         number_of_likes = stuff.number_of_likes()
         context["cat_menu"] = cat_menu
         context["number_of_likes"] = number_of_likes
+        context["user"] = self.request.user
         return context
 
 
@@ -62,8 +95,9 @@ class AddCommentView(CreateView):
         form.instance.post_id = self.kwargs["pk"]
         return super().form_valid(form)
 
-    success_url = reverse_lazy("home")
-
+    #success_url = reverse_lazy("home")
+    def get_success_url(self):
+       return reverse_lazy('article-detail', kwargs={'pk': self.kwargs.get('pk')})
 
 class AddCategoryView(CreateView):
     model = Category
