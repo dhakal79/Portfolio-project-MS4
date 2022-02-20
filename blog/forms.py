@@ -12,19 +12,19 @@ for item in choices:
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title','slug','author', 'featured_image','category', 'excerpt', 'content', 'status')
+        fields = ('title', 'slug', 'author', 'featured_image', 'category', 'excerpt', 'content', 'status')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices= choice_list, attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'excerpt': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
-            #'content': forms.CharField(widget=SummernoteWidget()),
-            'status': forms.Select(attrs={'class': 'form-control'}),       
-     
+            'status': forms.Select(attrs={'class': 'form-control'}),
+
         }
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -33,6 +33,6 @@ class CommentForm(forms.ModelForm):
 
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'}),          
-     
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+
         }
