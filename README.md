@@ -3,10 +3,9 @@
 # Water Channel Blog 
 Welcome! [IHE Delft](http://un-ihe.org)
 ## Introduction
-The global water crisis is a major concern today and will become more severe in the coming years. The availability of 
-freshwater becomes more challenging in the semi-arid regions. However, in other areas where freshwater is available(surface and groundwater),contamiantion and degradation of the water quality is a major issue risking the health of millions of people. As per the SDG 6, availability of fresh and safe water for all is a basic necessity for overall human development. Therefore, there is need of ideas and solutions that can help to provide the clean freeshwater to the entire population. 
+The global water crisis is a major concern today and will become more severe in the coming years. The availability of freshwater becomes more challenging in the semi-arid regions. However, in other areas where freshwater is available(surface and groundwater),contamiantion and degradation of the water quality is a major issue risking the health of millions of people. As per the SDG 6, availability of fresh and safe water for all is a basic necessity for overall human development. Therefore, there is a need of ideas and solutions that can help to provide the clean freshwater to the entire population. 
 
-The overall aim of this project is to develop open access water channel blog with an objective to share the ideas and solutions to address global water issues. All the water practictioner from all over the world (including professional, students) can be a member of the community in the blog. 
+The overall aim of this project is to develop an open access water channel blog with an objective to share the ideas and solutions to address global water issues. All the water practitioner from all over the world (including professional, students) can be a member of the community in this blog. 
 
 A live water channel blog can be found [here](https://waterchanel.herokuapp.com/).
 
@@ -43,27 +42,27 @@ This water channel blog is desinged as a a platform where water professional and
 # 2. User Expereince (UX) design
   [Go to the top](#table-of-contents)
 
-  Water crisis is now a global issue which can be address by joint efforts from professional working in this field. Therefore, knowledge, expereience sharing among professional is important to save the resources and time to solve the water issue. This project is thus aimed to design the user friendly water channel app which allows all water professional to register and participate in sharing the knowledge and experience.  
+  Water crisis is now a global issue which can be addressed by the joint efforts from professional working in this field. Therefore, sharing of knowledge and expereience among professional is important mainly to i)to save the available resources and time and ii) solve the global water issue. This project is thus aimed to design the user friendly water channel blog which allows all water professional to register and participate in sharing their knowledge and experience in water related issues.  
 
-The following users types can be benifitted from the app:
+The following users types can be benifitted from the blog:
 
 - Water professionals
 - Students in field of water.
-- University to consider as a learning platform for sharing the expereince as case study.
+- University/institution who can consider the platform for thier educational activities.
 
    <a name="user-goals"></a>
 ## 2.1 User Goals
   [Go to the top](#table-of-contents)
 
-The main goal of this project is to develop user friendly water channel blog . This is of great useful for me to apply in my teaching as a discussion platform with students.
+The main goal of this project is to develop a user friendly water channel blog. This blog is of great useful for me, which I planned to use for active particiaption/discussion among the students in the class.
 
   <a name="user-stories"></a>
 ## 2.1 Blog Design thinking
   [Go to the top](#table-of-contents)
 
-The following design thinking were kept in mind while desiging this channel. 
-- Login and Logout
+The following design thinking were kept in mind while designing this channel. 
 - Register
+- Login and Logout
 - Create Posts
 - Category the post 
 - Article Detailed View
@@ -91,7 +90,7 @@ Three step processes were followed as below:
 ## 3.1 Existing Feature
 
 ### 3.1.1 Navigation bar:
-Water Channel included naviagation bar that include; 
+Water Channel has naviagation bar that include; 
 - My water channel (Home page)
 - Register
 - Login 
@@ -100,7 +99,7 @@ Water Channel included naviagation bar that include;
 Any users has an ability to view the home page, page detail view, register in the webpage and login as registered user.
 ![Nav bar](media/image/navbar-1.jpg)
 
-Once the users are registered and login in the page the naviagation bar has more functionality to add post, categories the post, edit and delete own post of the user as well as has an access to like other users post.
+Once the users are registered and login in the page the naviagation bar has more functionality to add post, categories the post, edit and delete own post as well as has an access to like other users post.
 
  ![Nav bar](media/image/navbar-2.jpg)
 
