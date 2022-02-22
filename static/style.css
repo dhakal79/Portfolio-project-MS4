@@ -80,16 +80,30 @@ body{
     height: 450px;
   }
 
+/* media querries */
 
   /*For screen size max width 767 px */
 
 @media screen and (max-width: 767px) {
 
   .card-body{
-    height: 550px;
+    height: 500px;
   }
 
   .card-body.post-detail {
     height: unset;
   }
 }
+ 
+/* media querries */
+/*For tablet screen size from 768 -992 px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+.card-img-top {
+  height: unset;
+}
+.card-body{
+  height: 650px;
+}
+}
+
