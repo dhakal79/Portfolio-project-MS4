@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse,redirect
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import (
     ListView,
     DetailView,
@@ -62,22 +62,25 @@ class CategoryView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = "post_details.html"
-    
-    
+
     def get(self, request, pk):
         try:
             post = Post.objects.get(pk=pk)
             cat_menu = Category.objects.all()
             number_of_likes = post.number_of_likes()
-            data= { 'cat_menu': cat_menu, 'number_of_likes': number_of_likes, 'user': self.request.user, 'post': post }
-            
+            data = {
+                'cat_menu': cat_menu,
+                'number_of_likes': number_of_likes,
+                'user': self.request.user,
+                'post': post,
+                }
         except Post.DoesNotExist:
-             return redirect('/404')
-        except :
-             return redirect('/500')
+            return redirect('/404')
+        except:
+            return redirect('/500')
         return render(request, 'post_details.html', data)
-    
-  
+
+
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
@@ -94,8 +97,8 @@ class AddCommentView(CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        params= {"pk": self.kwargs.get("pk")}
-        return reverse_lazy("article-detail", kwargs= params)
+        params = {"pk": self.kwargs.get("pk")}
+        return reverse_lazy("article-detail", kwargs=params)
 
 
 class AddCategoryView(CreateView):
@@ -124,8 +127,9 @@ def LikeView(request, pk):
 
 def error_404(request):
         data = {}
-        return render(request,'error_404.html', data)
+        return render(request, 'error_404.html', data)
+
 
 def error_500(request):
         data = {}
-        return render(request,'error_500.html', data)
+        return render(request, 'error_500.html', data)

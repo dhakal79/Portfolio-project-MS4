@@ -27,4 +27,3 @@ urlpatterns = [
     path('404/', error_404),
     path('500/', error_500),
 ]
-
