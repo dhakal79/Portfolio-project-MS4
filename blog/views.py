@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse,redirect
 from django.views.generic import (
     ListView,
     DetailView,
@@ -62,18 +62,22 @@ class CategoryView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = "post_details.html"
-
-    def get_context_data(self, *args, **kwargs):
-        cat_menu = Category.objects.all()
-        context = super(ArticleDetailView, self).get_context_data(*args, **kwargs)
-        stuff = get_object_or_404(Post, id=self.kwargs["pk"])
-        number_of_likes = stuff.number_of_likes()
-        context["cat_menu"] = cat_menu
-        context["number_of_likes"] = number_of_likes
-        context["user"] = self.request.user
-        return context
-
-
+    
+    
+    def get(self, request, pk):
+        try:
+            post = Post.objects.get(pk=pk)
+            cat_menu = Category.objects.all()
+            number_of_likes = post.number_of_likes()
+            data= { 'cat_menu': cat_menu, 'number_of_likes': number_of_likes, 'user': self.request.user, 'post': post }
+            
+        except Post.DoesNotExist:
+             return redirect('/404')
+        except :
+             return redirect('/500')
+        return render(request, 'post_details.html', data)
+    
+  
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
@@ -90,7 +94,8 @@ class AddCommentView(CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy("article-detail", kwargs={"pk": self.kwargs.get("pk")})
+        params= {"pk": self.kwargs.get("pk")}
+        return reverse_lazy("article-detail", kwargs= params)
 
 
 class AddCategoryView(CreateView):
@@ -115,3 +120,12 @@ def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get("post_id"))
     post.likes.add(request.user)
     return HttpResponseRedirect(reverse("article-detail", args=[str(pk)]))
+
+
+def error_404(request):
+        data = {}
+        return render(request,'error_404.html', data)
+
+def error_500(request):
+        data = {}
+        return render(request,'error_500.html', data)

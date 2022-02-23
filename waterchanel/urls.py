@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#from blog import views as blog_views
-#from django.conf.urls import handler404, handler500
+from blog.views import error_404, error_500
 
 
 urlpatterns = [
@@ -25,8 +24,7 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
-   
+    path('404/', error_404),
+    path('500/', error_500),
 ]
 
-#handler404 = blog_views.error_404
-#handler500 = blog_views.error_500
