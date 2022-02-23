@@ -131,7 +131,14 @@ body{
   height: unset;
 }
 .card-body{
-  height: 650px;
+  height: unset;
 }
 }
 
+/*For tablet screen size from 768 -992 px */
+@media screen and (min-width: 993px) {
+
+    .card-body{
+    height: unset;
+  }
+  }
