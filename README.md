@@ -130,23 +130,19 @@ The user is able to register, login and logout. The blog has a new view or form 
 
 ### 3.1.5 Comment the post
 
-The registered Users is allowed to comemnt on the blog post and is only possible when they logged in. The comment can be made in the post detail page. 
+The registered Users is allowed to make comemnt on the blog post detail view page and is only possible when they logged in the blog site. 
 
-![Home Page](media/image/comment.jpg)
+![Comment Page](media/image/comment.jpg)
 
-The user can write a comment about the blog by clicking on please provide comments. The name, date and time of comment will appear on the comment box.
+The user can write a comment about the blog by clicking on "please provide comments". The name, date and time of comments will appear on the comment box.
 
 ![Home Page](media/image/add-comment.jpg)
 
 ## 3.1.6 Like the post
 
-Registered Users are able to like post of theirs and other user's post but only when they are logged in. The total number of likes will be recorded on the post. This provides an opportuntiy to know how popular is the post. 
+Registered users are able to like post of theirs and other user's post but only when they are logged in. The total number of likes will be recorded on the post. This provides an opportuntiy to know how popular is the blog post. 
 
-![Home Page](media/image/like-post.jpg)
-
-![](static/Media/images/number_of_likes.JPG)
-
-The like button also chnages colour to Red and allows the user to press again to Unlike.
+![Like Page](media/image/like-post.jpg)
 
 ### 3.1.7 Add Post in webbrowser
 
@@ -156,10 +152,13 @@ Each post is automatically stamped with the date of when the posts were uploaded
 
 ### 3.1.8 Edit and Delete Post
 
-Registered Users are able to edit or delete their own posts within the app but only when logged in.
+Registered users are able to edit their own posts within the blog but only when they are logged in.
 
-![](static/Media/images/edit_delete_post.JPG)
+![Edit Page](media/image/edit.jpg)
 
+They can also delete their own post
+
+![Delete Page](media/image/delete.jpg)
 When a user is not registered or logged in they are not shown the "Edit Post" or "Delete Post" buttons.
 
 ### 3.1.9 Add Categories of the post
@@ -167,11 +166,13 @@ When a user is not registered or logged in they are not shown the "Edit Post" or
 Each post is given a category by choosing from the scroll down menu when creating a post. Each post is then added to the corresponding category list enabling the user to choose a category and view all posts within.
 
 There is also a dropdown menu within the navbar to allow the user to choose a category to view from the homepage.
+Here is one example of post under category "drinking water"
+![Category Page](media/image/category.jpg)
 
 <a name="future-feature"></a>
 ## Future Features
 
-- Profile page to include bio and profile picture.
+- Profile page to be include bio and profile picture.
 - Comments to automatically populate the username instead of adding name to form.
 
 <a name="technologies-used"></a>

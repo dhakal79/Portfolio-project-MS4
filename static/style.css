@@ -135,10 +135,10 @@ body{
 }
 }
 
-/*For tablet screen size from 768 -992 px */
+/*For tablet screen size from 993 px */
 @media screen and (min-width: 993px) {
 
     .card-body{
-    height: 500px;
+    height: unset;
   }
   }
