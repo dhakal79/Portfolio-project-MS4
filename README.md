@@ -114,7 +114,7 @@ The admin page is created where the admin has the ability right to the all funct
 
 ### 3.1.3 Home Page (My water channel)
 
-The channel has homepage where it listed the summary of recent posts. In the home page the post will appear with its title and short text (max 200) and picture. For detail view of the post, user can click on the more and then it redirect to the detail page.
+The channel has homepage where it listed the summary of recent posts. In the home page the post will appear with its title and short text (max 200) and picture. For detail view of the post, user can click on the more and then it redirect to the detail page.git 
 
 ![Home Page](media/image/home-page-1.jpg)
 
