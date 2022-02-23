@@ -90,7 +90,7 @@ body{
 .social-media i {
   font-size: 170%;
   padding: 25px;
-  color: rgb(5, 204, 48);
+  color: white;
 }
 .social-media a {
   text-decoration: none;
@@ -139,6 +139,6 @@ body{
 @media screen and (min-width: 993px) {
 
     .card-body{
-    height: unset;
+    height: 500px;
   }
   }

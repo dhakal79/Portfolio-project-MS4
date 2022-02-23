@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if user.is_authenticated %}
 <h2 class ="add-post">Please add comments to the blog post</h2>
 <br/>
 <div class="form-group">
@@ -9,4 +10,7 @@
     <button class="btn btn-primary">Add Comment
     </button>
     </div>
+    {% else %}
+    You are not allowed here!!
+    {% endif %}
   {% endblock %}

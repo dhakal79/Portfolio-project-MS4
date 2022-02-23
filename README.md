@@ -114,22 +114,23 @@ The admin page is created where the admin has the ability right to the all funct
 
 ### 3.1.3 Home Page (My water channel)
 
-The channel has homepage where it listed the summary of recent posts. In the home page the post will appear with its title and short text (max 200) and picture. For detail view of the post, user can click on the more and then it redirect to the detail page.git 
+The channel has homepage where it listed the summary of recent posts. In the home page the post will appear with its title and short text (max 200) and picture. For detail view of the post, user can click on the more... and then it will redirect to the detail page.
 
 ![Home Page](media/image/home-page-1.jpg)
 
-Home page is design with functality of pagination. Each page only show 6 posts and there is a NEXT button at the bottom of page to go to the next page. The next page then has the PREVIOUS button to go back to the previous page.
+Home page is design with functionality of pagination. Each page shows maximum of 6 recent posts. In order to view other older posts  there is NEXT button at the bottom of page, which will redirect to the next page.  The next page also has the button " PREVIOUS" which will redirect to the previous page of the blog.
+At the bottom of the page there is a link to the social media where the users can connect to the admin social media page.
 
 ![Home Page](media/image/home-page-2.jpg)
 
 ### 3.1.4 Login and Register
 
-The user is able to register, login and logout using the navbar navigation buttons using a new view or form to allow the user to login, logout or register. The users have an full access to post/edit/update/delate the post once they register and login.
+The user is able to register, login and logout. The blog has a new view or form to allow the user to login, logout or register. The users have an full access to post/edit/update/delate the post once they register and login.
 
 
 ### 3.1.5 Comment the post
 
-It is allowed to registered Users to comemnt on their and other users post and is only possible when they logged in. The comment can be made in the post detail page. 
+The registered Users is allowed to comemnt on the blog post and is only possible when they logged in. The comment can be made in the post detail page. 
 
 ![Home Page](media/image/comment.jpg)
 
