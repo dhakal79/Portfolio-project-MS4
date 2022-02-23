@@ -16,16 +16,6 @@ from django.core.paginator import EmptyPage
 from django.core.paginator import PageNotAnInteger
 
 
-
-#def error_404(request):
-        #data = {}
-       # return render(request,'blog/error_404.html', data)
-
-#def error_500(request):
-        #data = {}
-       # return render(request,'blog/error_500.html', data)
-
-
 class HomeView(ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")

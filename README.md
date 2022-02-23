@@ -172,8 +172,9 @@ Here is one example of post under category "drinking water"
 <a name="future-feature"></a>
 ## Future Features
 
-- Profile page to be include bio and profile picture.
-- Comments to automatically populate the username instead of adding name to form.
+- Profile page to be included that describes the bio and profile picture or the post author.
+- Automatically populate the username instead of adding name to comment form.
+- 
 
 <a name="technologies-used"></a>
 
@@ -202,30 +203,38 @@ Here is one example of post under category "drinking water"
   [Go to the top](#table-of-contents)
 ## 5.1 General
 - Throughout the development of the water channel blog I have tested each View, Model and URL together after each one had been written. 
-- Any changes made in the models, I performed makemigrations and migrate. In the sametime, code for view.py and urls were also written and run the server to check if there are issues or not. I checked if the url written directed to the right page that i am expecting or not. 
-- All the pages were manullay tested and well the the code written were validated using W3C validator (for Html), PEP8 online (Python) and Jigsaw (CSS). the details of each testing are summarized below.
+- Any changes made in the models, I performed makemigrations and migrate. In the sametime, code for view.py and urls were also written and run the server to check if there are any issues or not. I checked if the url written directed to the right page that i am expecting or not. 
+- All the pages were manullay tested 
+- All the code written were also validated using W3C validator (for Html), PEP8 online (Python) and Jigsaw (CSS). the details of each testing are summarized below.
 ## 5.2 W3C, Jigsaw and PEP8 online validation
-  I have tested this project manually by passing the code through W3C, JigSaw and PEP8 online validation tool and confirmed there are no errors. The screenshot is as shown below:
-  for W3C validation
-  for Jigsaw validation
+  I have tested manually (for each page of the blog) by passing the code through W3C, JigSaw and PEP8 online validation tool and confirmed there are no errors. The screenshot is as shown below:
+  for W3C validation (sample example for home page)
+  ![W3C validation](media/image/w3c.jpg)
+  for CSS validation
+ ![W3C validation](media/image/css.jpg)
+
   for PEP8 validation
+
 ## 5.3 Mannual testing 
 
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Water Channel(Home page) | checked if on click to "Water Channel", the browser redirects me to the Water Channel "home page".| PASS
 Water Channel(Home page) | checked if recent posted blog appear on the the front page of home page or not.| PASS
-Pagination | checked if there appears 6 blog posts in "Water Channel" home page or not. And after clicking to the button NEXT goes to the other pages where other additional blog posts appears.| PASS
-Pagination | checked if bby clicking "PREVIOUS" button redirect to the previous page or not.| PASS
-Detail page | checked if my clicking "more" on home page of each blog post redirect to the detail page or not.
-| PASS
+Pagination | checked if there appears 6 blog posts in "Water Channel" home page or not. And after clicking to the button NEXT goes to the other pages where other additional blog posts appears and vice versa.| PASS
+Detail page | checked if by clicking "more...." on home page of each blog post redirect to the detail page or not.| PASS
 Detail page| checked if button "back" in detail page redirect to home page or not.| PASS
-Post like| checked if registered user can like to blog post or not and registered the number of likes.| PASS
-Comment | checked if on clicking "please provide comment" redirect to comment form page or not.| PASS
-Comment | checked if registered user can comment ont he post or not and their comments appears on the detail blog page with name and date of comment.| PASS
+Post like| checked if registered user can like to blog post or not and count the number of likes.| PASS
+Comment | checked if registered user after clicking on "please provide comment" redirect to comment form page or not.| PASS
+Comment | checked if after clicking to add comment, the page redirect to the correcting detail blog page with name of blog user who commented and date when he/she made the comment.| PASS
 Register/login|checked if users can register and login in the blog or not".| PASS
-Edit/Delete post |checked if the post can be edited and deleted by the authorized resitered user only or not.| PASS
+Edit/Delete post |checked if the post can be edited and deleted by the authorized resitered user only or not.The users can edit and delete their own post only| PASS
 Catergory | checked if on click to each "Category", the browser redirects me to the the respective category page.| PASS
+Add category| checked if register user can add additional new category to the blog post and after addition new category appears as new category in the nav bar.|PASS 
+Social media links|checked if social media links provided in the footer open in the separate page.|PASS
+Responsive design|Checked if the design is responsive to differnt media size or  not.|PASS
+Error page 404|Check if the issue of error page 404 is solved or not.|NOT PASS
+Alert notification|check if once the user post in the blog get automatic alert on the home page or not.|NOT PASS
 
 
 <a name="bugs"></a>
