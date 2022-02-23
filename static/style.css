@@ -80,6 +80,31 @@ body{
     height: 450px;
   }
 
+  .social-media {
+    text-align: center;
+}
+.social-media >li {
+  display: inline;
+}
+
+.social-media i {
+  font-size: 170%;
+  padding: 25px;
+  color: rgb(237, 235, 243);
+}
+.social-media a {
+  text-decoration: none;
+}
+.footer{
+  background-color: rgb(79, 207, 122);
+ 
+}
+.connect{
+  color: white;
+  margin-left: 10px;
+}
+
+
 /* media querries */
 
   /*For screen size max width 767 px */
@@ -93,6 +118,9 @@ body{
   .card-body.post-detail {
     height: unset;
   }
+  .social-media i {
+    margin: 0;
+}
 }
  
 /* media querries */
