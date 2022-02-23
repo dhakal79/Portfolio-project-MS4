@@ -54,7 +54,7 @@ The following users types can be benifitted from the blog:
 ## 2.1 User Goals
   [Go to the top](#table-of-contents)
 
-The main goal of this project is to develop a user friendly water channel blog. This blog is of great useful for me, which I planned to use for active particiaption/discussion among the students in the class.
+The main goal of this project is to develop a user friendly water channel blog. This blog is of great important to me as I have planned to use the blog for the active particiaption/discussion among the students in the class.
 
   <a name="user-stories"></a>
 ## 2.1 Blog Design thinking
@@ -71,13 +71,13 @@ The following design thinking were kept in mind while designing this channel.
 - Edit and Delete Posts (own post)
 
 Three step processes were followed as below:
-- Set the user requirement and added to the user stories within the github project
+- Set the user requirements and added to the user stories within the github project
 ![User Stories](media/image/userstories.jpg)
 
-- After the gradual fullfilment of the requirement, the stories were moved to in progress colum.
+- After the gradual fullfilment of the requirements, the stories were moved to in progress column.
 ![User Stories](media/image/userstories_progress.jpg)
 
-- And finallym when requiment was fully meet, it was moved to the complete column.
+- And finally when requirement was fully met, it was moved to the complete column.
 ![User Stories](media/image/userstories_complete.jpg)
 
  <a name="features"></a>
@@ -90,31 +90,31 @@ Three step processes were followed as below:
 ## 3.1 Existing Feature
 
 ### 3.1.1 Navigation bar:
-Water Channel has naviagation bar that include; 
+Water Channel has naviagation bar that includes; 
 - My water channel (Home page)
 - Register
 - Login 
-- categories 
+- Categories 
 
-Any users has an ability to view the home page, page detail view, register in the webpage and login as registered user.
+Any users have an ability to view the home page, page detail view, register in the webpage and login as registered user.
 ![Nav bar](media/image/navbar-1.jpg)
 
-Once the users are registered and login in the page the naviagation bar has more functionality to add post, categories the post, edit and delete own post as well as has an access to like other users post.
+Once the users are registered and login in the page the naviagation bar has more functionality such as; add post, define categories of the post, edit/delete the post(only own post) and finally like the posts.
 
  ![Nav bar](media/image/navbar-2.jpg)
 
 - Social media links (for facebook, Linkden, Twitter and Youtube) are placed at the bottom of the each page in the footer. All the links will open in a new tab. 
-- At the bottom of each it is written By Nirajan Dhakal, 2022 
+
 
 ### 3.1.2 Django admistration page
 
-The admin page is also created where the administration also has the ability to post, edit the blog, which include django summernote function. While posting the new post admin should write title, slug (automatically populated), author name (based on registration), attached image, and text area for exerpt, contet of the blog. It also has an option to choose the category of new post, and finally status as draft or published. 
+The admin page is created where the admin has the ability right to the all functionality of the blog. For any new post admin should write title, slug (automatically populated), category of the post, author name (admin), attached image, add contet of the blog and finally published. 
 
 ![Nav bar](media/image/django-admin.jpg)
 
 ### 3.1.3 Home Page (My water channel)
 
-The channel has homepage where it listed the recent summary of recent posts with title and short text including picture. Once the user likes the post, there is an option to click more to redirect to the post detail page.
+The channel has homepage where it listed the summary of recent posts. In the home page the post will appear with its title and short text (max 200) and picture. For detail view of the post, user can click on the more and then it redirect to the detail page.
 
 ![Home Page](media/image/home-page-1.jpg)
 
