@@ -233,7 +233,7 @@ Catergory | checked if on click to each "Category", the browser redirects me to 
 Add category| checked if register user can add additional new category to the blog post and after addition new category appears as new category in the nav bar.|PASS 
 Social media links|checked if social media links provided in the footer open in the separate page.|PASS
 Responsive design|Checked if the design is responsive to differnt media size or  not.|PASS
-Error page 404|Check if the issue of error page 404 is solved or not.|NOT PASS
+Error page 404/500|Check if the issue of error page 404/500 is solved or not.| PASS
 Alert notification|check if once the user post in the blog get automatic alert on the home page or not.|NOT PASS
 
 

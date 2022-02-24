@@ -44,7 +44,7 @@
         <form action="{% url 'like_post' post.pk %}"method="POST">
           {% csrf_token %}
           {% if user.is_authenticated %}
-          <button type="submit", name="post_id", value ="{{ post.id }}", class="btn btn-primary btn-sm">Like
+          <button type="submit" name="post_id" value ="{{ post.id }}" class="btn btn-primary btn-sm">Like
           {% endif %}
           </button> - {{ number_of_likes }}Likes
         </form>
@@ -73,5 +73,4 @@
 <hr>
 {% endfor %}
 {% endif %}
-<!--<a href ="{% url 'home' %}" class="btn btn-secondary">Back</a> -->
 {% endblock %}
