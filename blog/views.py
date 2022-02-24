@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import (
     ListView,
     DetailView,
@@ -28,7 +30,6 @@ class HomeView(ListView):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
         context["cat_menu"] = cat_menu
         return context
-
 
 class CategoryView(ListView):
     model = Category
@@ -81,10 +82,11 @@ class ArticleDetailView(DetailView):
         return render(request, 'post_details.html', data)
 
 
-class AddPostView(CreateView):
+class AddPostView(SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post_page.html"
+    success_message="successfull"
 
 
 class AddCommentView(CreateView):
@@ -126,10 +128,10 @@ def LikeView(request, pk):
 
 
 def error_404(request):
-        data = {}
-        return render(request, 'error_404.html', data)
+    data = {}
+    return render(request, 'error_404.html', data)
 
 
 def error_500(request):
-        data = {}
-        return render(request, 'error_500.html', data)
+    data = {}
+    return render(request, 'error_500.html', data)

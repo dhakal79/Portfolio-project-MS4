@@ -17,6 +17,11 @@
 <div class="container-fluid">
   <h2 class = "recent-post"> Recent Posts
   </h2>
+  {% for message in messages %}
+<div class="alert {{ message.tags }} alert-dismissible" role="alert">
+    {{ message | safe }}
+</div>
+{% endfor %}
   <div class="row">
     {% for post in post_list %}
     <div class="col-md-4">
