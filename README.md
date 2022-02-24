@@ -17,6 +17,7 @@ A live water channel blog can be found [here](https://waterchanel.herokuapp.com/
  [2. User Expereince (UX) design](#ux)
   - [User Goals:](#user-goals)
   - [Blog Design thinking:](#user-stories)
+  - [Site Skeleten(Wireframe):](#wireframe)
 
   [3. Features](#features)
  - [Existing features](#exist-feature)
@@ -79,6 +80,18 @@ Three step processes were followed as below:
 
 - And finally when requirement was fully met, it was moved to the complete column.
 ![User Stories](media/image/userstories_complete.jpg)
+
+  <a name="wireframe"></a>
+## 2.2 Site Skeleten (wireframe)
+  [Go to the top](#table-of-contents)
+
+[Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for  mobile browser format. The concept design (wireframes) of webpages of the water channel prepared is presented below.
+
+### Home Page (MY Water Channel)
+![wireframe](media/image/wireframe-home.jpg)
+
+### Home Page (MY Water Channel)
+![wireframe](media/image/wireframe-detail.jpg)
 
  <a name="features"></a>
 
@@ -243,13 +256,13 @@ Alert notification|check if once the user post in the blog get automatic alert o
   [Go to the top](#table-of-contents)
 
 ## 7.1 Solved bugs
-- The update on static css did not show up in the page after heroku deployment. This was solved by chaning below;
+- The update on static css did not show up in the page after heroku deployment. This was solved by changing below;
 
     In setting.py
 
       1. debug = "DEVELOPMENT" in os.environ
 
-        In, env.py add,
+    In, env.py add,
 
       2. os.environ["DEVELOPMENT"] = "true"  and 
 
@@ -257,11 +270,11 @@ Alert notification|check if once the user post in the blog get automatic alert o
 
       3. DISABLE_COLLECTSTATIC          1  
 
-- The update in static CSS did not change in gitpod environment as well. This was solved by adding missing '/' STATIC URL = 'static/'
+- The update in static CSS did not change in gitpod environment as well. This was solved by adding missing '/' in STATIC URL = 'static/'
 
-- The detail page edit did not work and it says the page cannot be reached. this was solved by adding missing '%' 
-before url in the link below:
+- The detail page edit did not work and it says the page cannot be reached. this was solved by adding missing '%' before url in the link below:
 <a href="{ url 'edit_post' post.pk %}">(Edit)</a>
+
 
 ## 7.2 Unsolved bugs
 No bugs remaining 
@@ -272,16 +285,22 @@ No bugs remaining
   [Go to the top](#table-of-contents)
 
   The project was deployed to GitHub and pushed throughout the devlopment process. The project was also deployed to Heroku in the early stages of development to ensure that there weren't any issues later on in the project.
-Auto deploy was selected within Heroku to ensure that each push from GitHub would push and deploy to Heroku.
+Mannual deploy was selected within Heroku and has been deployed the latest versio/update in the project.
 
-## Method of Deployment
-
-- In Heroku create new app 
+## 8.1 Method of Deployment
+### 8.1.1 Installing Django and supporting libraries
+- In gitpod terminal, install Django and supporting libraries and create requirement files
+- Create a project "waterchanel" and app "blog" 
+- Add installed app in the setting.py and migrate the chnages 
+### 8.1.2 Deploying to Heroku app
+- Create new Heroku app 
 - Added database to app using "Heroku Postgres"
 - Set environment variables in env.py, "DATABASE_URL" and "SECRET_KEY"
 - Copy DATABASE_URL to Settings.py
 - Copy SECRET_KEY to Settings.py
 - Migrate Changes
+### 8.1.3 Get static and media files stored on Cloudinary:
+
 
  <a name="acknowledgement"></a>
 
