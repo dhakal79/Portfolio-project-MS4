@@ -86,7 +86,7 @@ class AddPostView(SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post_page.html"
-    success_message="successfull"
+    success_message="The new blog post has been added"
 
 
 class AddCommentView(CreateView):

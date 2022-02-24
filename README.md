@@ -163,6 +163,9 @@ Registered Users are able to create their own posts within the app but only when
 
 Each post is automatically stamped with the date of when the posts were uploaded.
 
+Once the new post is added in the blog channel, a flash message "The new blog post has been added" will appear in the Home page.
+![Flash message](media/image/flash.jpg)
+
 ### 3.1.8 Edit and Delete Post
 
 Registered users are able to edit their own posts within the blog but only when they are logged in.
@@ -182,6 +185,10 @@ There is also a dropdown menu within the navbar to allow the user to choose a ca
 Here is one example of post under category "drinking water"
 ![Category Page](media/image/category.jpg)
 
+### 3.1.10 Error page 404 and 500
+The page not found (404) error and server error (500) has been addressed. For both cases, a pop up message and asked to redirect to home page appears. 
+
+![404 error](media/image/error_404.jpg)
 <a name="future-feature"></a>
 ## Future Features
 
@@ -247,7 +254,7 @@ Add category| checked if register user can add additional new category to the bl
 Social media links|checked if social media links provided in the footer open in the separate page.|PASS
 Responsive design|Checked if the design is responsive to differnt media size or  not.|PASS
 Error page 404/500|Check if the issue of error page 404/500 is solved or not.| PASS
-Alert notification|check if once the user post in the blog get automatic alert on the home page or not.|NOT PASS
+Flash message notification|check if once the user post in the blog an automatic flash message " the new blog post has been added" will appear on the home page or not.|PASS
 
 
 <a name="bugs"></a>

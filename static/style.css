@@ -104,7 +104,10 @@ body{
   margin-left: 10px;
 }
 
-
+/*flash message */
+.alert{
+  color: #e60637;
+}
 
 /* media querries */
 
