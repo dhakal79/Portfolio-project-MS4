@@ -87,13 +87,23 @@ Three step processes were followed as below:
 
 [Balsamiq](https://balsamiq.com/) was used to create wireframes of the website. This was very useful as it gives the template of the UI. Wireframes were designed for  mobile browser format. The concept design (wireframes) of webpages of the water channel prepared is presented below.
 
-### Home Page (MY Water Channel)
+### Home page (MY Water Channel)
 ![wireframe](media/image/wireframe-home.jpg)
 
-### Home Page (MY Water Channel)
+### Post detail page 
 ![wireframe](media/image/wireframe-detail.jpg)
 
+### Pagination  
+![wireframe](media/image/wireframe-pagination.jpg)
+
+### Post  
+![wireframe](media/image/wireframe-post.jpg)
+
+### Add Category  
+![wireframe](media/image/wireframe-category.jpg)
+
  <a name="features"></a>
+
 
 # 3. Features
   [Go to the top](#table-of-contents)
