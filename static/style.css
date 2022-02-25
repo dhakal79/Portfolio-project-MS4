@@ -17,6 +17,7 @@ body{
     color: #1d0462;
     padding-top: 15px;
     padding-bottom: 10px;
+    text-transform: capitalize;
 }
 /* Member registration page */
 
@@ -80,6 +81,8 @@ body{
     height: 450px;
   }
 
+  /* Social media link */
+
   .social-media {
     text-align: center;
 }
@@ -89,19 +92,22 @@ body{
 
 .social-media i {
   font-size: 170%;
-  padding: 25px;
+  padding: 15px;
   color: white;
+  display: inline;
 }
 .social-media a {
   text-decoration: none;
 }
 .footer{
   background-color: rgb(79, 207, 122);
+  height: 75px;
  
 }
 .connect{
   color: white;
   margin-left: 10px;
+  font-size: 20px;
 }
 
 /*flash message */
