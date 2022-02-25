@@ -7,7 +7,6 @@ from django.views.generic import (
     CreateView,
     UpdateView,
     DeleteView,
-    View,
 )
 from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment
@@ -30,6 +29,7 @@ class HomeView(ListView):
         context = super(HomeView, self).get_context_data(*args, **kwargs)
         context["cat_menu"] = cat_menu
         return context
+
 
 class CategoryView(ListView):
     model = Category
@@ -86,7 +86,7 @@ class AddPostView(SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post_page.html"
-    success_message="The new blog post has been added"
+    success_message = "The new blog post has been added"
 
 
 class AddCommentView(CreateView):

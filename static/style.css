@@ -109,6 +109,10 @@ body{
   color: #e60637;
 }
 
+img{
+  width: 70%;
+}
+
 /* media querries */
 
   /*For screen size max width 767 px */

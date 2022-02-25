@@ -231,10 +231,10 @@ The page not found (404) error and server error (500) has been addressed. For bo
   for W3C validation (sample example for home page)
   ![W3C validation](media/image/w3c.jpg)
   for CSS validation
- ![W3C validation](media/image/css.jpg)
+ ![JigSaw validation](media/image/css.jpg)
 
   for PEP8 validation
-
+ ![PEP8online validation](media/image/pep8online.jpg)
 ## 5.3 Mannual testing 
 
 TEST            | OUTCOME                          | PASS / FAIL  
