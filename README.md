@@ -199,12 +199,15 @@ Here is one example of post under category "drinking water"
 The page not found (404) error and server error (500) has been addressed. For both cases, a pop up message and asked to redirect to home page appears. 
 
 ![404 error](media/image/error_404.jpg)
+
 <a name="future-feature"></a>
 ## Future Features
 
 - Profile page to be included that describes the bio and profile picture or the post author.
 - Automatically populate the username instead of adding name to comment form.
-- 
+- Add forget user name and password
+- Add search button on nav bar 
+- Add text editor in the add page content like what we have in admin add post page.
 
 <a name="technologies-used"></a>
 

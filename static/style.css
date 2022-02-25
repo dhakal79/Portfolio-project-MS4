@@ -11,6 +11,7 @@ body{
 }
 .card-title{
    font-size: 23px; 
+   padding-top: 10px;
 }
 .title{
     font-size: 25px;
@@ -117,6 +118,7 @@ body{
 
 img{
   width: 70%;
+
 }
 
 /* media querries */

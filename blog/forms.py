@@ -21,7 +21,7 @@ class PostForm(forms.ModelForm):
             'content',
             'status'
             )
-
+        
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
