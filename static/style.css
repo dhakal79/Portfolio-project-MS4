@@ -126,7 +126,7 @@ img{
 @media screen and (max-width: 767px) {
 
   .card-body{
-    height: 500px;
+    height: 550px;
   }
 
   .card-body.post-detail {
