@@ -2,12 +2,14 @@
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
 <br/>
+<!-- title of the blog post in detail page with author name, date -->
 <h2>{{ post.title }}
 </h2>
 <small>By: 
   {{ post.author.first_name }}
   {{ post.author.last_name }} -
   {{ post.created_on }} 
+  <!-- user authentication for edit and delete own post-->
   {% if user.is_authenticated %} 
   {% if user.id == post.author.id %} 
   <a href="{% url 'edit_post' post.pk %}">(Edit)
@@ -41,6 +43,7 @@
         <a href=" {% url 'home' %}" >Back
         </a>
         <hr>
+        <!-- for liking the post by register user and counting the number of likes-->
         <form action="{% url 'like_post' post.pk %}"method="POST">
           {% csrf_token %}
           {% if user.is_authenticated %}
@@ -52,6 +55,7 @@
     </div>
   </div>
 </div>
+<!-- for commenting the blog post-->
 <h3 class="comment">Comments from the blog users</h3>
 <hr>
 {% if not post.comments.all %}

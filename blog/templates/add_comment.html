@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- User authentication for comment page-->
 {% if user.is_authenticated %}
 <h2 class ="add-post">Please add comments to the blog post</h2>
 <br/>
+<!-- form for comment page-->
 <div class="form-group">
   <form method="POST">
     {% csrf_token %}
@@ -11,6 +13,7 @@
     </button>
     </div>
     {% else %}
+    <!-- message for not right user-->
   <h2 class="add-post">You are not allowed here!!Please register and login to have an access to the comment on the blog post</h2>
     {% endif %}
   {% endblock %}

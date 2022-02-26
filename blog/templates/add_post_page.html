@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- User authentication for add post page-->
 {% if user.is_authenticated %}
 <h2 class ="add-post">Please add blog post as registered water channel user</h2>
 <h3 class ="instruction"> Please follow the intructions while posting in a blog</h3>
+<!-- instruction for users-->
 <ul class ="instruction">
     <li>Provide the title of the blog</li>
     <li>Provide slug for the post (can be two words dervided from title and separated by hyphen</li>
@@ -12,6 +14,7 @@
     <li>Choose the status as published</li>
 </ul>
 <br/>
+ <!-- form for adding the blog post-->
 <div class="form-group">
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
@@ -20,6 +23,7 @@
     </button>
     </div>
   {% else %}
+  <!-- message for not right user-->
   You are not allowed here!!
   {% endif %}
   {% endblock %}

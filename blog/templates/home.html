@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <br/>
+<!-- Introduction about the blog-->
 <div class="p-3 mb-2 bg-success text-white">
   <h1>Water Channel Blog
   </h1>
@@ -17,11 +18,13 @@
 <div class="container-fluid">
   <h2 class = "recent-post"> Recent Posts
   </h2>
+  <!-- Alert message/flash when new post is added in the blog-->
   {% for message in messages %}
 <div class="alert {{ message.tags }} alert-dismissible" role="alert">
     {{ message | safe }}
 </div>
 {% endfor %}
+<!-- Summary blog post in the home page with image, title, name and date -->
   <div class="row">
     {% for post in post_list %}
     <div class="col-md-4">
@@ -46,8 +49,8 @@
             </em>
           </small>
           <br/>
-          <!--  <p class="card-text">{{ post.excerpt }}</p>-->
           <small>
+            <!-- user authentication for edit and delete of their own post-->
             {% if user.is_authenticated %}
             {% if user.id == post.author.id %}
             <a href="{% url 'edit_post' post.pk %}">(Edit)
@@ -57,7 +60,8 @@
             {% endif %}
             {% endif %}
           </small>
-          <br/>      
+          <br/> 
+          <!-- Slicing the text for a summary in the home page and link to the detial page-->     
           {{ post.content| slice:":200" }}
           <a href = "{% url 'article-detail' post.pk %}"> more...
             </small>
@@ -73,6 +77,7 @@
 </div>
 </div>
 </div>
+<!-- Page pagination-->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-center">
@@ -92,6 +97,7 @@
 </nav>
 {% endif %}
 </div>
+<!-- social media links-->
 <div class="footer">  
   <h2 class="connect">Connect with us</h2>
 <footer>

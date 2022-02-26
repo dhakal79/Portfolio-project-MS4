@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- User authentication for delete page-->
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}  
 <h2 class ="update-post">Here you can delete the blog post</h2>
@@ -9,6 +10,7 @@
     <li>You can only delete your post</li>
 </ul>
 <br/>
+  <!-- form for deleting the post-->
 <div class ="form-group">
   <form method="POST">
     {% csrf_token %}
@@ -20,6 +22,7 @@
     </button>
     </div>
   {% else %}
+   <!-- message for not right user-->
   You are not allowed here!!
   {% endif %}
   {% else %}

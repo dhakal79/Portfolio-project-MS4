@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- User authentication for delete page and instruction for users-->
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
 <h2 class ="update-post">Here you can edit and update the blog post</h2>
@@ -9,6 +10,7 @@
     <li>You can only edit and update your post</li>
 </ul>
 <br/>
+<!-- form for editing the post-->
 <div class ="form-group">
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
@@ -17,6 +19,7 @@
   <button class="btn btn-primary">Update
   </button>
   {% else %}
+  <!-- message for not right user-->
   You are not allowed here!!
   {% endif %}
   {% else %}
