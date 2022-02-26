@@ -305,7 +305,8 @@ Draft post|check if any blog post as draft visible to other users or not.|PASS
   <form method="POST" enctype="multipart/form-data">
   
 ## 7.2 Unsolved bugs
-No bugs remaining 
+Following PEP8 online validation for env.py files is kept as it is. It is related to long character...
+![PEP8online validation](media/image/pep8-unsolved-bug.jpg)
 
  <a name="deployment"></a>
 
