@@ -187,6 +187,10 @@ They can also delete their own post
 ![Delete Page](media/image/delete.jpg)
 When a user is not registered or logged in they are not shown the "Edit Post" or "Delete Post" buttons.
 
+Here is an example when registered as differnt user, one can view the post but the option of edit and delete is disappear as these post is of admin.
+
+![edit/delete Page](media/image/edit-post.jpg)
+
 ### 3.1.9 Add Categories of the post
 
 Each post is given a category by choosing from the scroll down menu when creating a post. Each post is then added to the corresponding category list enabling the user to choose a category and view all posts within.
@@ -225,8 +229,6 @@ The page not found (404) error and server error (500) has been addressed. For bo
 * [Ami](http://ami.responsivedesign.is/) was used to develop a Mockup screenshot generator
 * [Heroku](heroku.com) was used to deploy a final version of the Python Essentials application code.
 * [Bootstrap](https://getbootstrap.com/) to make responsive design much easier due to their "mobile first" design.
-* [Postgres](https://www.postgresql.org/) as Database Framework
-
 * [Cloudinary](https://cloudinary.com/) was used to store all images uploaded to the website.
 
 
@@ -268,6 +270,7 @@ Social media links|checked if social media links provided in the footer open in 
 Responsive design|Checked if the design is responsive to differnt media size or  not.|PASS
 Error page 404/500|Check if the issue of error page 404/500 is solved or not.| PASS
 Flash message notification|check if once the user post in the blog an automatic flash message " the new blog post has been added" will appear on the home page or not.|PASS
+Draft post|check if any blog post as draft visible to other users or not.|PASS
 
 
 <a name="bugs"></a>
@@ -276,7 +279,7 @@ Flash message notification|check if once the user post in the blog an automatic 
   [Go to the top](#table-of-contents)
 
 ## 7.1 Solved bugs
-- The update on static css did not show up in the page after heroku deployment. This was solved by changing below;
+- The update on static css did not show up in webpage after heroku deployment. This was solved by changing below;
 
     In setting.py
 
@@ -290,12 +293,17 @@ Flash message notification|check if once the user post in the blog an automatic 
 
       3. DISABLE_COLLECTSTATIC          1  
 
-- The update in static CSS did not change in gitpod environment as well. This was solved by adding missing '/' in STATIC URL = 'static/'
+- The update in static CSS also did not change in gitpod environment as well. This was solved by adding missing '/' in STATIC URL = 'static/'
 
 - The detail page edit did not work and it says the page cannot be reached. this was solved by adding missing '%' before url in the link below:
 <a href="{ url 'edit_post' post.pk %}">(Edit)</a>
 
+- Received an HTML validation error in the add post page. The Error was: Attribute maxlength not allowed on element select at this point.This issue was solved by switching CharField to TextField in the Post Model 
 
+- In edit page, the new image selection (repalcement of old image) did not work. This was solved by adding 
+  enctype="multipart/form-data as;
+  <form method="POST" enctype="multipart/form-data">
+  
 ## 7.2 Unsolved bugs
 No bugs remaining 
 
@@ -304,30 +312,59 @@ No bugs remaining
 # 8. Deployment
   [Go to the top](#table-of-contents)
 
-  The project was deployed to GitHub and pushed throughout the devlopment process. The project was also deployed to Heroku in the early stages of development to ensure that there weren't any issues later on in the project.
-Mannual deploy was selected within Heroku and has been deployed the latest versio/update in the project.
+  The project was deployed to GitHub and pushed throughout the devlopment process. The project was also deployed to Heroku in the early stages of development to ensure that there weren't any issues later on in the project. Mannual deploy was selected within Heroku and has been deployed the latest versio/update in the project.
 
 ## 8.1 Method of Deployment
 ### 8.1.1 Installing Django and supporting libraries
 - In gitpod terminal, install Django and supporting libraries and create requirement files
 - Create a project "waterchanel" and app "blog" 
 - Add installed app in the setting.py and migrate the chnages 
+### 8.1.1 GitHub Repository
+- Set up project GitHub repository and user stories correctly 
+- Ensure all requirements for the project are added to the requirements.txt file prior to deployment. The command **pip3 freeze --local > requirements.txt** was used to run in the terminal to do this.
+- All installed apps are added within setting.py under INSTALLED_APPS
+
 ### 8.1.2 Deploying to Heroku app
 - Create new Heroku app 
-- Added database to app using "Heroku Postgres"
-- Set environment variables in env.py, "DATABASE_URL" and "SECRET_KEY"
+    
+- Added database 
+
+Steps for this were;
+
+i) Navigate to the resources tab for the app that has just been created.
+ii) In the Add-Ons section, search for the Heroku Postgres add on and submit an order form. iii)Select the Settings tab for the app. iv)Reveal Config Vars and copy the DATABASE_URL string provided. v) Create a env.py file within the project and use the copied string to create a DATABASE_URL environment variable. The Python OS module will be required for this.
+
+- Create a SECRET_KEY
+
+  i) Create a SECRET_KEY environment variable Within the env.py file ii) Add the SECRET_KEY variable in the settings tab of the Heroku app, reveal config vars and add the along with the corresponding string.
+  
+- Update setting.py file 
+
+Import dj_database_url and env.py into the settings.py file within the project as.
+import dj_database_url
+if os.path.isfile("env.py"):
+    import env
+- Update the default SECRET_KEY variable provided by Django to the SECRET_KEY environment variable.
+ SECRET_KEY = os.environ.get('SECRET_KEY')
+
 - Copy DATABASE_URL to Settings.py
 - Copy SECRET_KEY to Settings.py
 - Migrate Changes
-### 8.1.3 Get static and media files stored on Cloudinary:
+- Connect app to Cloudinary
+- Tell Django where the templates are stored
+- Update ALLOWED_HOSTS
+- Create a Procfile
+- Connect the GitHub repository to the Heroku App
 
+Note: I followed all the steps mentioned in the Django Blog Cheat Sheet provided by Code Institute.
 
  <a name="acknowledgement"></a>
 
 # 9. Acknowledgement
   [Go to the top](#table-of-contents)
 
-
 * Inspired from Hello Django and I think I can blog project from the code institute course
 * Thanks to my mentor Marcel Mulders for his constructive feedback
+* Thanks to the Code Institute tutor support team, who helped me develop my understanding throughout this project.
 * Thanks to Youtube videos and especially to Codemy.com videos on Django projects
+* Text in the blog post were taken from various sources in the internet

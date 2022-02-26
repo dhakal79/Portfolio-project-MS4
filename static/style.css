@@ -43,8 +43,11 @@ body{
     margin-bottom: 2px;
 }
 .instruction li{
-    font-size: 12px;
+    font-size: 15px;
     color: #62041b;
+}
+.btn-primary {
+    margin-top: 2px;
 }
 
   /* Add category page */
